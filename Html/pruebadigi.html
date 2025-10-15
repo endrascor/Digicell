@@ -4,12 +4,149 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Digicell CR</title>
-  <link rel="stylesheet" href="estilos.css">
-  
+  <style>
+    * {box-sizing: border-box; margin: 0; padding: 0;}
+    body {font-family: Arial, Helvetica, sans-serif; background: #f4f4f4; color: #111;}
+
+    /* Encabezado superior */
+    .topbar {
+      background: #e60000;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 10px 20px;
+      font-size: 14px;
+    }
+    .topbar .izquierda, .topbar .derecha {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+    }
+    .topbar img {height: 25px;}
+
+    /* Logo principal */
+    .logo-bar {
+      background: #e60000;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 30px;
+      color: white;
+      flex-wrap: wrap;
+    }
+    .logo-bar h1 {font-size: 40px; font-weight: bold;}
+
+    /* Menú principal */
+    nav {
+      background: #ff1a1a;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      padding: 10px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 18px;
+      padding: 5px 10px;
+    }
+    nav a:hover {text-decoration: underline;}
+    .search-bar input {
+      padding: 7px 10px;
+      border: none;
+      border-radius: 5px;
+      width: 220px;
+    }
+
+    /* Sección productos principales */
+    .productos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 25px;
+      justify-items: center;
+      padding: 40px 20px;
+      background: #fff;
+    }
+    .producto img {
+      width: 180px;
+      height: auto;
+      border-radius: 5px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    .producto p {
+      margin-top: 10px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    /* Segunda fila con botones */
+    .productos-secundarios {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 25px;
+      justify-items: center;
+      padding: 40px 20px;
+      background: #fff;
+    }
+    .producto-sec {
+      text-align: center;
+    }
+    .producto-sec img {
+      width: 180px;
+      border-radius: 5px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    .producto-sec p {margin: 10px 0; font-weight: bold;}
+    .btn-ver {
+      background: #111;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 20px;
+      text-decoration: none;
+      font-size: 14px;
+    }
+    .btn-ver:hover {background: #e60000;}
+
+    /* Footer */
+    footer {
+      background: #e60000;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    .footer-top {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid rgba(255,255,255,0.3);
+    }
+    .footer-top div {text-align: left;}
+    .footer-top h3 {font-size: 18px; margin-bottom: 10px;}
+    .footer-top a {color: white; text-decoration: none; display: block; margin-bottom: 5px;}
+    .footer-top input {
+      padding: 8px;
+      border-radius: 5px;
+      border: none;
+      width: 180px;
+    }
+    .footer-bottom {
+      background: #444;
+      color: #ccc;
+      padding: 10px;
+      font-size: 14px;
+    }
+  </style>
 </head>
 <body>
 
-  <div class="barra-superior">
+  <div class="topbar">
     <div class="izquierda">
       <span>Todo en Tecnología</span>
       <span>Desbloqueo</span>
@@ -40,7 +177,6 @@
   </nav>
 
   <section class="productos">
-    
     <div class="producto">
       <img src="/mnt/data/f6ea17b9-a41e-4245-bdbe-615d4d7442eb.png" alt="celular1" />
       <p>Un diseño innovador con potencia sin precedentes.</p>
@@ -92,7 +228,7 @@
   </section>
 
   <footer>
-    <div class="footer-arriba">
+    <div class="footer-top">
       <div>
         <h3>Acerca de Nosotros</h3>
         <a href="#">Facebook</a>
@@ -112,7 +248,7 @@
         <input type="email" placeholder="Email" />
       </div>
     </div>
-    <div class="footer-abajo">
+    <div class="footer-bottom">
       © Digicell CR Costa Rica - 2025. Todos los Derechos Reservados.
     </div>
   </footer>
