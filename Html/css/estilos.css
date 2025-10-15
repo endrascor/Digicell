@@ -1,7 +1,29 @@
 /* Configuraciones base  */
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+margin: 0;
+padding: 0;
+box-sizing: border-box;
 }
 
+body {
+background: #fafafa;
+color: #333;
+}
+
+/* Encabezado */
+.encabezado {
+background-color: #e10000;
+color: white;
+}
+
+.top-bar {
+  background: #b80000;
+  text-align: center;
+  font-size: 0.9rem;
+  padding: 5px;
+}
+
+.logo {
+  text-align: center;
+  padding: 10px;
+}
