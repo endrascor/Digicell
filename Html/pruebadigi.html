@@ -51,45 +51,23 @@
       width: 220px;
     }
 
-    /* Sección productos principales */
-    .productos {
+    /* Segunda fila con botones */
+    .productos{
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-template-columns: repeat(5, minmax(200px, 1fr));;
+      text-align: center;
       gap: 25px;
       justify-items: center;
       padding: 40px 20px;
       background: #fff;
-    }
-    .producto img {
-      width: 180px;
-      height: auto;
-      border-radius: 5px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    }
-    .producto p {
-      margin-top: 10px;
-      font-weight: bold;
-      text-align: center;
     }
 
-    /* Segunda fila con botones */
-    .productos-secundarios {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 25px;
-      justify-items: center;
-      padding: 40px 20px;
-      background: #fff;
-    }
-    .producto-sec {
-      text-align: center;
-    }
-    .producto-sec img {
+    .producto img {
       width: 180px;
       border-radius: 5px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     }
-    .producto-sec p {margin: 10px 0; font-weight: bold;}
+    .producto p {margin: 10px 0; font-weight: bold;}
     .btn-ver {
       background: #111;
       color: white;
@@ -150,11 +128,12 @@
   </div>
 
   <nav>
-    <img width="70" height="70" src="/Images/logo.jpg" alt="">
+    <img width="60" height="60" src="/Images/logo.jpg" alt="">
     <a href="#">Inicio</a>
     <a href="#">Celulares</a>
     <a href="#">Reparación</a>
     <div class="search-bar"><input type="text" placeholder="Buscar..." /></div>
+    <a href="#"><img src="/Images/search_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png" alt=""></a>
     <a href="#">Estuches</a>
     <a href="#">Audífonos</a>
     <a href="#">Cargadores</a>
@@ -164,26 +143,28 @@
     <div class="producto">
       <img src="/mnt/data/f6ea17b9-a41e-4245-bdbe-615d4d7442eb.png" alt="celular1" />
       <p>Un diseño innovador con potencia sin precedentes.</p>
+      <a href="#" class="btn-ver">Ver más</a>
     </div>
     <div class="producto">
       <img src="/mnt/data/f6ea17b9-a41e-4245-bdbe-615d4d7442eb.png" alt="celular2" />
       <p>Rendimiento increíble. Diseño duradero.</p>
+      <a href="#" class="btn-ver">Ver más</a>
     </div>
     <div class="producto">
       <img src="/mnt/data/f6ea17b9-a41e-4245-bdbe-615d4d7442eb.png" alt="celular3" />
       <p>Todo lo que te encanta. Incluido el precio.</p>
+      <a href="#" class="btn-ver">Ver más</a>
     </div>
     <div class="producto">
       <img src="/mnt/data/f6ea17b9-a41e-4245-bdbe-615d4d7442eb.png" alt="celular4" />
       <p>El teléfono más delgado. Con un desempeño profesional.</p>
+      <a href="#" class="btn-ver">Ver más</a>
     </div>
     <div class="producto">
       <img src="/mnt/data/f6ea17b9-a41e-4245-bdbe-615d4d7442eb.png" alt="celular5" />
       <p>Diseño innovador y una batería excepcional.</p>
+      <a href="#" class="btn-ver">Ver más</a>
     </div>
-  </section>
-
-  <section class="productos-secundarios">
     <div class="producto-sec">
       <img src="/mnt/data/f6ea17b9-a41e-4245-bdbe-615d4d7442eb.png" alt="sec1" />
       <p>Todo lo que quieres. Incluso un gran precio.</p>
