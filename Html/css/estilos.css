@@ -106,5 +106,49 @@
     }
 
 
- 
+ /* ===== ESTILOS EXCLUSIVOS PARA PÁGINA DE BLOG ===== */
+
+/* Hero del blog */
+.blog-hero {
+  background: #ff1a1a;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+}
+.blog-hero h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+}
+.blog-hero p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+.blog-hero h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+/* Categorías del blog */
+.categorias {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  padding: 0 20px 30px;
+  background: #ff1a1a;
+}
+.categorias button {
+  background: black;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.categorias button:hover {
+  background: #333;
+}
 
