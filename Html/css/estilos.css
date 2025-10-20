@@ -4,7 +4,7 @@
 
     /* Encabezado superior */
     .topbar {
-      background: #163dff;
+      background: black;
       color: white;
       display: flex;
       justify-content: space-between;
@@ -99,9 +99,12 @@
       width: 180px;
     }
     .footer-abajo {
-      background: #444;
+      background: black;
       color: #ccc;
       padding: 10px;
       font-size: 14px;
     }
-  
+
+
+ 
+
