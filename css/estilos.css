@@ -23,7 +23,7 @@
 
     /* Menú principal */
     nav {
-      background: #ff1a1a;
+      background: #ff1616;
       display: flex;
       align-items: center;
       justify-content: space-around;
@@ -44,6 +44,12 @@
       border-radius: 5px;
       width: 220px;
     }
+    .search-bar img {
+      vertical-align: middle;
+      margin-left: 5px;
+      height: 24px;
+      width: 24px;
+    }
 
     /* Segunda fila con botones */
     .productos{
@@ -53,7 +59,8 @@
       gap: 25px;
       justify-items: center;
       padding: 40px 20px;
-      background: #fff;
+      background: #38533c;
+      background-image: url(/Images/abstract-seamless-white-and-grey-square-3d-pattern-background-modern-geometric-texture-design-illustration-vector.jpg)
     }
 
     .producto img {
@@ -63,7 +70,7 @@
   border-radius: 5px;
   box-shadow: 0 0px 0px rgba(0,0,0,0.2);
 }
-    .producto p {margin: 10px 0; font-weight: bold;}
+    .producto p {margin: 20px 0; font-weight: bold;}
     .btn-ver {
       background: #111;
       color: white;
@@ -76,7 +83,7 @@
 
     /* Footer */
     footer {
-      background: #e60000;
+      background: #ff1616;
       color: white;
       padding: 20px;
       text-align: center;
@@ -84,14 +91,30 @@
     .footer-arriba {
       display: flex;
       justify-content: space-around;
+      align-items: center;
       flex-wrap: wrap;
       gap: 20px;
       padding-bottom: 15px;
       border-bottom: 1px solid rgba(255,255,255,0.3);
     }
+    .footer-arriba .social-iconos img {height: 30px; margin-right: 10px;}
+
+    .footer-arriba #acerca {
+      grid-row: 1/span 2;
+    }
+    .footer-arriba .social-iconos {
+      display: grid;
+      grid-template-columns: repeat(3, auto);
+      gap: 20px;
+      align-items: center;
+    }
     .footer-top div {text-align: left;}
     .footer-top h3 {font-size: 18px; margin-bottom: 10px;}
     .footer-top a {color: white; text-decoration: none; display: block; margin-bottom: 5px;}
+
+    .footer-arriba div {
+      align-self: center;
+    }
     .footer-top input {
       padding: 8px;
       border-radius: 5px;
