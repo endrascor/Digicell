@@ -117,12 +117,15 @@ footer {
 }
 .footer-arriba .social-iconos img { height: 30px; margin-right: 10px; }
 .footer-arriba #acerca { grid-row: 1/span 2; }
+
 .footer-arriba .social-iconos {
   display: grid;
   grid-template-columns: repeat(3, auto);
   gap: 20px;
   align-items: center;
 }
+
+
 .footer-top div { text-align: left; }
 .footer-top h3 { font-size: 18px; margin-bottom: 10px; }
 .footer-top a { color: white; text-decoration: none; display: block; margin-bottom: 5px; }
@@ -136,7 +139,7 @@ footer {
 .footer-abajo {
   background: black;
   color: #ccc;
-  padding: 10px;
+  padding: 13px;
   font-size: 14px;
 }
 

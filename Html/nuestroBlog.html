@@ -1,86 +1,96 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nuestro Blog - Digicell CR</title>
-<link rel="stylesheet" href="/css/blog.css"> 
+  <link rel="stylesheet" href="/css/blog.css">
 </head>
-<body>
 
+<body>
   <!-- Barra superior -->
   <div class="topbar">
     <div class="izquierda">
-      <img src="logo.png" alt="Logo">
+      <span>Todo en Tecnología</span>
+      <span>Desbloqueo</span>
+      <span>Servicios</span>
+      <span>Repuestos</span>
+      <span>Reparación</span>
     </div>
     <div class="derecha">
-      <img src="/Images/comercio.png" alt="Carrito">
-      <span></span>
-      <span></span>
+      <span>Taller</span>
+      <span>Venta de tarjetas y recargas</span>
+      <span>Accesorios para celular</span>
     </div>
   </div>
 
   <!-- Menú de navegación -->
   <nav>
-    <img width="60" height="60" src="/Images/logo.jpg" alt="">
-    <a href="">Inicio</a>
-    <a href="">Celulares</a>
-    <a href="">Reparación</a>
+    <img width="50" height="60" src="/Images/logo.jpg" alt="Logo Digicell">
+    <a href="#">Inicio</a>
+    <a href="#">Celulares</a>
+    <a href="#">Reparación</a>
     <div class="search-bar">
       <input type="text" placeholder="Buscar...">
     </div>
-    <a href=""><img src="/Images/search_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png" alt=""></a>
-    <a href="">Estuches</a>
-    <a href="">Audífonos</a>
-    <a href="">Cargadores</a>
+    <a href="#"><img src="/Images/search_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png" alt="Buscar"></a>
+    <a href="#">Estuches</a>
+    <a href="#">Audífonos</a>
+    <a href="#">Cargadores</a>
+    <div class="usuario-carrito">
+      <a href="#"><img width="40" height="40" src="/Images/avatar.png" alt="Usuario"></a>
+      <a href="#"><img width="40" height="40" src="/Images/carro-de-la-compra.png" alt="Carrito"></a>
+    </div>
   </nav>
 
-  <!-- Hero del blog -->
-  <section class="blog-principal">
-    <h1>NUESTRO BLOG</h1>
-    <p>Descubre las últimas tendencias y consejos del mundo móvil</p>
-    <h2>Explorar por categorías</h2>
-    <div class="categorias">
-      <button>Todas</button>
-      <button>Tutoriales</button>
-      <button>Consejos y trucos</button>
-      <button>Opiniones</button>
-      <button>Noticias tech</button>
-    </div>
-  </section>
+  <!-- Sección principal del blog -->
+ <section class="blog-principal">
+  <h1>NUESTRO BLOG</h1>
+  <p>Descubre las últimas tendencias y consejos del mundo móvil</p>
+</section>
 
-  <!-- Artículos del blog -->
+<!-- Sección de categorías (FUERA del blog-principal) -->
+<section class="categorias-section">
+  <h2>Explorar por categorías</h2>
+  <div class="categorias">
+    <button data-count="41">Todas</button>
+    <button data-count="12">Tutoriales</button>
+    <button data-count="8">Consejos y trucos</button>
+    <button data-count="6">Opiniones</button>
+    <button data-count="15">Noticias tech</button>
+  </div>
+</section>
+
+  <!-- Artículos -->
   <section class="productos">
     <div class="producto">
       <img src="/Images/tutorial-celular.PNG" alt="Tutoriales">
       <span class="categoria-tag">Tutoriales</span>
       <p>Cómo elegir el celular ideal para tus necesidades</p>
-      <a href="" class="btn-ver">Ver más</a>
+      <a href="#" class="btn-ver">Ver más</a>
     </div>
-
     <div class="producto">
       <img src="/Images/bateria.PNG" alt="Consejos">
       <span class="categoria-tag">Consejos y trucos</span>
       <p>Trucos para alargar la vida útil de tu batería</p>
       <a href="#" class="btn-ver">Ver más</a>
     </div>
-
     <div class="producto">
       <img src="/Images/gama-alta.PNG" alt="Opiniones">
       <span class="categoria-tag">Opiniones</span>
       <p>¿Vale la pena comprar un celular de gama alta en 2025?</p>
-      <a href="" class="btn-ver">Ver más</a>
+      <a href="#" class="btn-ver">Ver más</a>
     </div>
-
     <div class="producto">
       <img src="/Images/6g.PNG" alt="Noticias">
       <span class="categoria-tag">Noticias Tech</span>
       <p>Tendencias en celulares inteligentes para el 2026</p>
-      <a href="" class="btn-ver">Ver más</a>
+      <a href="#" class="btn-ver">Ver más</a>
     </div>
   </section>
 
-  <!-- Paginación lleva a otras páginas -->
+  <!-- Paginación -->
   <div class="paginacion">
     <button class="activo">1</button>
     <button>2</button>
@@ -90,40 +100,39 @@
 
   <!-- Footer -->
   <footer>
-    <div class="footer-arriba">
+    <div class="footer-top">
       <div>
         <h3>Acerca de Nosotros</h3>
         <div class="social-iconos">
-          <a href=""><img src="/Images/facebook.png" alt=""></a>
-          <a href=""><img src="/Images/instagram.png" alt=""></a>
-          <a href=""><img src="/Images/whatsapp.png" alt=""></a>
+          <a href="#"><img src="/Images/facebook.png" alt="Facebook"></a>
+          <a href="#"><img src="/Images/instagram.png" alt="Instagram"></a>
+          <a href="#"><img src="/Images/whatsapp.png" alt="WhatsApp"></a>
+          <a href="#"><img src="/Images/twitter-x.png" alt="X"></a>
         </div>
       </div>
-      
       <div>
         <h3>Ubicación</h3>
         <p>San Rafael<br>de Alajuela</p>
-        <img src="/Images/logo.jpg" alt="Logo" style="width: 80px; margin-top: 10px;">
       </div>
-      
+      <div>
+        <a id="logofooter" href="#"><img width="150" height="150" src="/Images/DI - 1.png" alt="Logo Digicell"></a>
+      </div>
       <div>
         <h3>Inicio</h3>
-        <a href="">Nuestro Blog</a>
+        <a href="#">Nuestro Blog</a>
       </div>
-      
       <div>
-        <h3>Recibe lo mas nuevo</h3>
+        <h3>Recibe lo más nuevo</h3>
         <div class="lo-mas-nuevo">
           <input type="email" placeholder="Email">
           <button>→</button>
         </div>
       </div>
     </div>
-    
-    <div class="footer-abajo">
+    <div class="footer-bottom">
       © Digicell CR Costa Rica - 2025. Todos los Derechos Reservados.
     </div>
   </footer>
-
 </body>
+
 </html>
