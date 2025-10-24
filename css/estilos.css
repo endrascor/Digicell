@@ -1,8 +1,8 @@
 /* Reset y estilos base */
 * { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: Arial, Helvetica, sans-serif; background: #f4f4f4; color: #111; }
+body { font-family: Arial, Helvetica, sans-serif; background: #f4f4f4; color: #111; background-image: url(/Images/abstract-seamless-white-and-grey-square-3d-pattern-background-modern-geometric-texture-design-illustration-vector.jpg);}
 
-/* Encabezado superior */
+/* Barra superior */
 .topbar {
   background: black;
   color: white;
@@ -13,13 +13,13 @@ body { font-family: Arial, Helvetica, sans-serif; background: #f4f4f4; color: #1
   padding: 10px 20px;
   font-size: 14px;
 }
+
 .topbar .izquierda, .topbar .derecha {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
   align-items: center;
 }
-.topbar img { height: 25px; }
 
 /* Menú principal */
 nav {
@@ -28,9 +28,9 @@ nav {
   align-items: center;
   justify-content: space-around;
   flex-wrap: wrap;
-  padding: 10px;
-  gap: 10px;
+  padding: 5px;
 }
+
 nav a {
   color: white;
   text-decoration: none;
@@ -38,14 +38,16 @@ nav a {
   font-size: 18px;
   padding: 5px 10px;
 }
-nav a:hover { text-decoration: underline; }
 
-.search-bar {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex: 1;
-  min-width: 200px;
+nav a:hover {
+  text-decoration: underline;
+}
+
+.search-bar img {
+  vertical-align: middle;
+  margin-left: 5px;
+  height: 24px;
+  width: 24px;
 }
 .search-bar input {
   padding: 7px 10px;
@@ -53,11 +55,11 @@ nav a:hover { text-decoration: underline; }
   border-radius: 5px;
   width: 220px;
 }
-.search-bar img {
-  vertical-align: middle;
-  margin-left: 5px;
-  height: 24px;
-  width: 24px;
+
+.descripcion{
+  font-size: 18px;
+  margin: 20px 0;
+  text-align: center;
 }
 
 /* Productos */
@@ -70,8 +72,6 @@ nav a:hover { text-decoration: underline; }
   gap: 25px;
   justify-items: center;
   padding: 40px 20px;
-  background: #38533c;
-  background-image: url(/Images/abstract-seamless-white-and-grey-square-3d-pattern-background-modern-geometric-texture-design-illustration-vector.jpg);
 }
 
 .producto img {
@@ -101,47 +101,123 @@ nav a:hover { text-decoration: underline; }
   }
 }
 
-/* Footer (idéntico al original) */
+/* Paginación */
+.paginacion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 30px 0;
+  background: #f4f4f4;
+}
+
+.paginacion button {
+  background: black;
+  color:#f4f4f4;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.paginacion button.activo,
+.paginacion button:hover {
+  background: #e60000;
+}
+
+/* Footer */
 footer {
+  margin-top: auto;
   background: #ff1616;
   color: white;
-  padding: 20px;
   text-align: center;
 }
-.footer-arriba {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 20px;
-  padding-bottom: 15px;
-  border-bottom: 1px solid rgba(255,255,255,0.3);
-}
-.footer-arriba .social-iconos img { height: 30px; margin-right: 10px; }
-.footer-arriba #acerca { grid-row: 1/span 2; }
 
-.footer-arriba .social-iconos {
+.footer-top {
   display: grid;
-  grid-template-columns: repeat(3, auto);
-  gap: 20px;
-  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 35px;
+  max-width: 1200px;
+  
+  margin: 0 auto;
+  padding: 25px 10px;
+
 }
 
+.footer-top h3 {
+  font-size: 18px;
+  margin-bottom: 25px;
+}
 
-.footer-top div { text-align: left; }
-.footer-top h3 { font-size: 18px; margin-bottom: 10px; }
-.footer-top a { color: white; text-decoration: none; display: block; margin-bottom: 5px; }
-.footer-arriba div { align-self: center; }
-.footer-top input {
-  padding: 8px;
+.footer-top a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 1px;
+}
+
+.footer-top a:hover {
+  text-decoration: underline;
+}
+
+/* Íconos sociales */
+.social-iconos {
+  display: grid;
+  grid-template-columns: repeat(2, 40px);
+  grid-template-rows: repeat(2, 40px);
+  justify-content: center;
+  align-items: center;
+  gap: 15px 30px;
+  margin: 0 auto;
+}
+
+.social-iconos a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  background: white;
+  border-radius: 51%;
+  transition: transform 0.2s ease;
+}
+
+.social-iconos img {
+  width: 28px;
+  height: 28px;
+}
+
+/* Formulario newsletter */
+.lo-mas-nuevo {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  justify-content: center;
+}
+
+.lo-mas-nuevo input {
+  padding: 10px;
   border-radius: 5px;
   border: none;
   width: 180px;
 }
-.footer-abajo {
+
+.lo-mas-nuevo button {
+  background: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Footer inferior */
+.footer-bottom {
   background: black;
   color: #ccc;
-  padding: 13px;
+  padding: 15px;
   font-size: 14px;
+  text-align: center;
 }
 
