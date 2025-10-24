@@ -101,31 +101,6 @@ nav a:hover {
   }
 }
 
-/* Paginación */
-.paginacion {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  padding: 30px 0;
-  background: #f4f4f4;
-}
-
-.paginacion button {
-  background: black;
-  color:#f4f4f4;
-  border: none;
-  padding: 10px 18px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-.paginacion button.activo,
-.paginacion button:hover {
-  background: #e60000;
-}
-
 /* Footer */
 footer {
   margin-top: auto;
