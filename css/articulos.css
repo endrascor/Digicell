@@ -340,7 +340,7 @@ footer {
 /* Responsive: imagen base y media queries */
 .contenido img {
   width: 100%;
-  max-width: 600px; /* ajustar aquí para cambiar el tamaño máximo del contenedor de la imagen */
+  max-width: 500px; /* ajustar aquí para cambiar el tamaño máximo del contenedor de la imagen */
   height: auto;
   display: block;
   margin: 0 auto 20px;
