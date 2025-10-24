@@ -90,6 +90,8 @@ nav a:hover { text-decoration: underline; }
   text-decoration: none;
   font-size: 14px;
 }
+
+
 .btn-ver:hover { background: #e60000; }
 
 /* Limitar máximo 5 columnas en pantallas grandes */
