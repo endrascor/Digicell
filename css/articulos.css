@@ -186,6 +186,13 @@ ul li {
   align-items: center;
   margin-bottom: 20px;
 }
+
+.recientes-lista li small {
+  color: #666;
+  margin-left: 36px;
+  font-size: 0.8rem;
+}
+
 /*flechas de categorias*/
 .categorias ul {
   list-style: none;
@@ -213,22 +220,24 @@ footer {
 .footer-top {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 30px;
+  gap: 35px;
   max-width: 1200px;
+  
   margin: 0 auto;
-  padding: 30px 10px;
+  padding: 25px 10px;
+
 }
 
 .footer-top h3 {
   font-size: 18px;
-  margin-bottom: 16px;
+  margin-bottom: 25px;
 }
 
 .footer-top a {
   color: white;
   text-decoration: none;
   display: block;
-  margin-bottom: 8px;
+  margin-bottom: 1px;
 }
 
 .footer-top a:hover {
@@ -260,6 +269,39 @@ footer {
 .social-iconos img {
   width: 28px;
   height: 28px;
+}
+
+/* Formulario newsletter */
+.lo-mas-nuevo {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  justify-content: center;
+}
+
+.lo-mas-nuevo input {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  width: 180px;
+}
+
+.lo-mas-nuevo button {
+  background: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Footer inferior */
+.footer-bottom {
+  background: black;
+  color: #ccc;
+  padding: 15px;
+  font-size: 14px;
+  text-align: center;
 }
 
 /* Formulario newsletter */
