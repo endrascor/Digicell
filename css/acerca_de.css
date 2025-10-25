@@ -1,0 +1,57 @@
+/* Reset y estilos base */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: Arial, Helvetica, sans-serif; background: #f4f4f4; color: #111; background-image: url(/Images/abstract-seamless-white-and-grey-square-3d-pattern-background-modern-geometric-texture-design-illustration-vector.jpg);}
+
+/* Barra superior */
+.topbar {
+  background: black;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px 20px;
+  font-size: 14px;
+}
+
+.topbar .izquierda, .topbar .derecha {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+/* Menú principal */
+nav {
+  background: #ff1616;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 5px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 5px 10px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.search-bar img {
+  vertical-align: middle;
+  margin-left: 5px;
+  height: 24px;
+  width: 24px;
+}
+.search-bar input {
+  padding: 7px 10px;
+  border: none;
+  border-radius: 5px;
+  width: 220px;
+}
