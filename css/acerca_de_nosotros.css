@@ -1,4 +1,4 @@
-/* Reset y estilos base */
+* Reset y estilos base */
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body { font-family: Arial, Helvetica, sans-serif; background: #f4f4f4; color: #111; background-image: url(/Images/abstract-seamless-white-and-grey-square-3d-pattern-background-modern-geometric-texture-design-illustration-vector.jpg);}
 
@@ -56,50 +56,9 @@ nav a:hover {
   width: 220px;
 }
 
-.descripcion{
-  font-size: 18px;
-  margin: 20px 0;
-  text-align: center;
-}
-
-/* Productos */
-.productos {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  max-width: 1400px;
-  margin: 0 auto;
-  text-align: center;
-  gap: 25px;
-  justify-items: center;
-  padding: 40px 20px;
-}
-
-.producto img {
-  width: 150px;
-  height: 149px;
-  object-fit: cover;
-  border-radius: 5px;
-  box-shadow: 0 0px 0px rgba(0,0,0,0.2);
-}
-.producto p { margin: 20px 0; font-weight: bold; }
-.btn-ver {
-  background: #111;
-  color: white;
-  padding: 8px 16px;
-  border-radius: 20px;
-  text-decoration: none;
-  font-size: 14px;
-}
 
 
-.btn-ver:hover { background: #e60000; }
 
-/* Limitar máximo 5 columnas en pantallas grandes */
-@media (min-width: 1200px) {
-  .productos {
-    grid-template-columns: repeat(5, 1fr);
-  }
-}
 
 /* Footer */
 footer {
@@ -193,4 +152,3 @@ footer {
   font-size: 14px;
   text-align: center;
 }
-
