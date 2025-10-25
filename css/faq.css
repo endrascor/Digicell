@@ -49,7 +49,7 @@
     font-weight: 600;
     padding: 15px 20px;
     cursor: pointer;
-    background: #fff;
+    background: white;
     border-radius: 8px;
     display: flex;
     justify-content: space-between;
@@ -57,7 +57,7 @@
 }
 
 .faq-pregunta:hover {
-    background: #fff5f5;
+    background: black;
 }
 
 /* Ícono de + y - */
