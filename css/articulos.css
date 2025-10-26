@@ -85,31 +85,6 @@ body {
   background: #fbfbfb;
 }
 
-/* Grupo de imágenes pequeñas en una fila */
-.contenido .img-grid {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  margin: 20px 0 30px;
-  background: #f9f9f9;
-  padding: 20px;
-  border-radius: 12px;
-}
-.contenido .img-grid img {
-  max-width: 300px;
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  display: block;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  transition: transform 0.2s ease;
-}
-.contenido .img-grid img:hover {
-  transform: scale(1.02);
-}
-
 /* Comentarios */
 .comentarios {
   margin-top: 25px;
@@ -158,6 +133,10 @@ body {
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 6px;
+}
+.form-comentario textarea {
+  /* Evita que el usuario pueda redimensionar el textarea (quita la 'esquina' de arrastre) */
+  resize: none;
 }
 .form-comentario button {
   margin-top: 15px;
