@@ -128,32 +128,71 @@
     </div>
   </nav>
 
-  <main class="producto-detalle">
-    <div class="imagen-producto">
-      <img src="/Images/celular1.png" alt="Detalle del celular">
-    </div>
-    <div class="producto-info">
-      <h1>Nombre del Celular</h1>
-      <p>Un diseño innovador con potencia sin precedentes. Este dispositivo representa lo último en tecnología móvil, combinando rendimiento excepcional con un diseño elegante.</p>
-      <div class="precio">₡399,900</div>
-      <div class="caracteristicas">
-        <h2>Características principales</h2>
-        <ul>
-          <li>Pantalla AMOLED de 6.7 pulgadas</li>
-          <li>Procesador de última generación</li>
-          <li>Cámara principal de 108MP</li>
-          <li>Batería de 5000mAh</li>
-          <li>Carga rápida de 65W</li>
-          <li>Android 14</li>
-        </ul>
-      </div>
-      <div class="acciones">
-        <a href="#" class="btn-comprar">Agregar al carrito</a>
-        <a href="index.html" class="btn-ver">Volver</a>
-      </div>
-    </div>
-  </main>
+    
+  <main id="contenedor-producto"></main>
+  <script>
 
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get("id");
+
+
+    const productos = {
+      1: {
+        nombre: "iPhone 15 Pro",
+        descripcion: "El nuevo iPhone 15 Pro con chip A17 Pro y cuerpo de titanio.",
+        precio: "₡750,000",
+        imagen: "/Images/iphone15pro.jpg",
+        caracteristicas: [
+          "Pantalla OLED de 6.1 pulgadas",
+          "Cámara triple de 48 MP",
+          "Chip A17 Pro",
+          "Carga rápida y MagSafe"
+        ]
+      },
+      2: {
+        nombre: "Samsung Galaxy S24",
+        descripcion: "Potente, elegante y con cámara profesional de 200 MP.",
+        precio: "₡680,000",
+        imagen: "/Images/galaxyS24.jpg",
+        caracteristicas: [
+          "Pantalla AMOLED 2X de 6.8 pulgadas",
+          "Cámara principal de 200 MP",
+          "Procesador Snapdragon 8 Gen 3",
+          "Resistencia IP68"
+        ]
+      }
+    };
+
+  <!-- script para info del producto -->
+    const contenedor = document.getElementById("contenedor-producto");
+    const producto = productos[id];
+
+    if (producto) {
+      contenedor.innerHTML = `
+        <div class="producto-detalle">
+          <img src="${producto.imagen}" alt="${producto.nombre}">
+          <div class="producto-info">
+            <h1>${producto.nombre}</h1>
+            <p>${producto.descripcion}</p>
+            <p class="precio">${producto.precio}</p>
+            <div class="caracteristicas">
+              <h2>Características principales:</h2>
+              <ul>
+                ${producto.caracteristicas.map(c => `<li>${c}</li>`).join("")}
+              </ul>
+            </div>
+          </div>
+        </div>
+      `;
+    } else {
+      contenedor.innerHTML = `
+        <p style="text-align:center; margin:50px;">No se encontró información del producto.</p>
+      `;
+    }
+  </script>
+
+  <footer>
+  <!-- Footer idéntico al original -->
   <footer>
     <div class="footer-top">
       <div>
@@ -173,24 +212,25 @@
       <div>
         <a id="logofooter" href="index.html"><img width="150" height="150" src="/Images/DI - 1.png" alt="Logo Digicell"></a>
       </div>
-      <div>
+            <div>
         <h3>Contactanos</h3>
         <p>Numero telefonico: 89082962</p><br>
-        <p>Correo electrónico: Dixmo.ds@gmail.com</p><br>
-        <p><a href="acerca_de.html">Equipo de desarrollo</a></p>
+         <p>Correo electrónico: Dixmo.ds@gmail.com</p><br>
+         <p><a href="acerca_de.html">Equipo de desarrollo</a></p>
       </div>
-      <div>
+    <div>
         <h3>Recibe las ultimas noticias</h3>
         <div class="lo-mas-nuevo">
-          <input type="email" placeholder="Email">
-          <button>→</button>
+        <input type="email" placeholder="Email">
+        <button>→</button>
         </div>
         <a href="nuestroBlog.html"><br><h3>Nuestro Blog</h3></a>
-      </div>
+    </div>
     </div>
     <div class="footer-bottom">
-      © Digicell CR Costa Rica - 2025. Todos los Derechos Reservados.
+    © Digicell CR Costa Rica - 2025. Todos los Derechos Reservados.
     </div>
+    </footer>
   </footer>
 </body>
 </html>
