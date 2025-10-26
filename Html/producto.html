@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Detalle del Producto - Digicell CR</title>
+  <link rel="stylesheet" href="/css/estilos.css">
+  <style>
+    .producto-detalle {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 20px;
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 40px;
+      align-items: start;
+    }
+    .producto-detalle img {
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .producto-info h1 {
+      margin-bottom: 20px;
+      color: #111;
+    }
+    .producto-info p {
+      margin-bottom: 15px;
+      line-height: 1.6;
+    }
+    .precio {
+      font-size: 24px;
+      font-weight: bold;
+      color: #ff1616;
+      margin: 20px 0;
+    }
+    .acciones {
+      display: flex;
+      gap: 20px;
+      margin-top: 30px;
+    }
+    .btn-comprar {
+      background: #ff1616;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+    }
+    .btn-comprar:hover {
+      background: #e60000;
+    }
+    .caracteristicas {
+      margin-top: 40px;
+    }
+    .caracteristicas h2 {
+      margin-bottom: 15px;
+      color: #111;
+    }
+    .caracteristicas ul {
+      list-style: none;
+      padding: 0;
+    }
+    .caracteristicas li {
+      margin-bottom: 10px;
+      padding-left: 20px;
+      position: relative;
+    }
+    .caracteristicas li::before {
+      content: "•";
+      color: #ff1616;
+      position: absolute;
+      left: 0;
+    }
+    @media (max-width: 768px) {
+      .producto-detalle {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      .producto-detalle img {
+        margin: 0 auto;
+      }
+      .acciones {
+        justify-content: center;
+      }
+      .caracteristicas {
+        text-align: left;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="izquierda">
+      <span>Todo en Tecnología</span>
+      <span>Desbloqueo</span>
+      <span>Servicios</span>
+      <span>Repuestos</span>
+      <span>Reparación</span>
+    </div>
+    <div class="derecha">
+      <span>Taller</span>
+      <span>Venta de tarjetas y recargas</span>
+      <span>Accesorios para celular</span>
+    </div>
+  </div>
+
+  <nav>
+    <img width="50" height="60" src="/Images/logo.jpg" alt="Logo Digicell">
+    <a href="index.html">Inicio</a>
+    <a href="#">Celulares</a>
+    <a href="#">Reparación</a>
+    <a href="#">Estuches</a>
+    <div class="search-bar">
+      <input type="text" placeholder="Buscar...">
+      <a href="#"><img src="/Images/search_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png" alt="Buscar"></a>
+    </div>
+    <a href="#">Audífonos</a>
+    <a href="#">Cargadores</a>
+    <a href="faq.html">FAQ</a>
+    <div class="usuario-carrito">
+      <a href="#"><img width="40" height="40" src="/Images/avatar.png" alt="Usuario"></a>
+      <a href="#"><img width="40" height="40" src="/Images/carro-de-la-compra.png" alt="Carrito"></a>
+    </div>
+  </nav>
+
+  <main class="producto-detalle">
+    <div class="imagen-producto">
+      <img src="/Images/celular1.png" alt="Detalle del celular">
+    </div>
+    <div class="producto-info">
+      <h1>Nombre del Celular</h1>
+      <p>Un diseño innovador con potencia sin precedentes. Este dispositivo representa lo último en tecnología móvil, combinando rendimiento excepcional con un diseño elegante.</p>
+      <div class="precio">₡399,900</div>
+      <div class="caracteristicas">
+        <h2>Características principales</h2>
+        <ul>
+          <li>Pantalla AMOLED de 6.7 pulgadas</li>
+          <li>Procesador de última generación</li>
+          <li>Cámara principal de 108MP</li>
+          <li>Batería de 5000mAh</li>
+          <li>Carga rápida de 65W</li>
+          <li>Android 14</li>
+        </ul>
+      </div>
+      <div class="acciones">
+        <a href="#" class="btn-comprar">Agregar al carrito</a>
+        <a href="index.html" class="btn-ver">Volver</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-top">
+      <div>
+        <a href="acerca_de_nosotros.html"><h3>Acerca de Nosotros</h3></a>
+        <div class="social-iconos">
+          <a href="https://www.facebook.com/digicellcr?mibextid=wwXIfr&rdid=2DJnOGPOuTlvaeyI&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F14Lvy1FkFeQ%2F%3Fmibextid%3DwwXIfr#"><img src="/Images/facebook.png" alt="Facebook"></a>
+          <a href="https://www.instagram.com/digicellcr/?igsh=MXIzcXRqdXh6a3E0OQ%3D%3D#"><img src="/Images/instagram.png" alt="Instagram"></a>
+          <a href="https://api.whatsapp.com/send?phone=%2B50689082962&fbclid=IwVERDUANonoJleHRuA2FlbQIxMAABHjc1VXu8AgMg59hcxSFNCaO0JDqgauUTUbJAHXhORFvG-yzyk1BGI7rTnWCb_aem_7SgqFlS5UCPlm7FW9nM_zg"><img src="/Images/whatsapp.png" alt="WhatsApp"></a>
+          <a href="https://www.tiktok.com/@dixmo19?_t=ZM-90p6Gs0Njz9&_r=1"><img src="/Images/tiktok.png" alt="tik-tok"></a>
+        </div>
+      </div>
+      <div>
+        <h3>Horario de atención y ubicacion</h3>
+        <p>San Rafael<br>de Alajuela</p><br>
+        <p>Lunes a sabado <br>9:30 am - 7:00 pm</p>
+      </div>
+      <div>
+        <a id="logofooter" href="index.html"><img width="150" height="150" src="/Images/DI - 1.png" alt="Logo Digicell"></a>
+      </div>
+      <div>
+        <h3>Contactanos</h3>
+        <p>Numero telefonico: 89082962</p><br>
+        <p>Correo electrónico: Dixmo.ds@gmail.com</p><br>
+        <p><a href="acerca_de.html">Equipo de desarrollo</a></p>
+      </div>
+      <div>
+        <h3>Recibe las ultimas noticias</h3>
+        <div class="lo-mas-nuevo">
+          <input type="email" placeholder="Email">
+          <button>→</button>
+        </div>
+        <a href="nuestroBlog.html"><br><h3>Nuestro Blog</h3></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © Digicell CR Costa Rica - 2025. Todos los Derechos Reservados.
+    </div>
+  </footer>
+</body>
+</html>
