@@ -128,13 +128,12 @@
     </div>
   </nav>
 
-    
+      <!-- script para info del producto -->
   <main id="contenedor-producto"></main>
   <script>
 
     const params = new URLSearchParams(window.location.search);
     const id = params.get("id");
-
 
     const productos = {
       1: {
@@ -163,7 +162,6 @@
       }
     };
 
-  <!-- script para info del producto -->
     const contenedor = document.getElementById("contenedor-producto");
     const producto = productos[id];
 
