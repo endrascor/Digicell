@@ -56,6 +56,128 @@ nav a:hover {
   width: 220px;
 }
 
+/* ======== DATOS ======== */
+.Datos {
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 50px 30px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.descripcion h1 {
+  color: #ff1616;
+  font-size: 1.8rem;
+  margin: 40px 0 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+.descripcion h1::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: #ff1616;
+  margin: 8px auto 0;
+  border-radius: 2px;
+}
+
+.descripcion p {
+  color: #111;
+  line-height: 1.7;
+  font-size: 1.1rem;
+  max-width: 900px;
+  margin: 0 auto 25px;
+}
+
+.descripcion ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px auto 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.descripcion li {
+  background: #ff1616;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+.descripcion li:hover {
+  transform: scale(1.05);
+}
+
+/* Galería de productos */
+.Lista_Productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 25px;
+  justify-items: center;
+  margin-top: 30px;
+}
+
+.Lista_Productos img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.Lista_Productos img:hover {
+  transform: scale(1.07);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+}
+
+/* Adaptación para pantallas pequeñas */
+@media (max-width: 768px) {
+  .Datos {
+    padding: 30px 15px;
+  }
+
+  .descripcion h1 {
+    font-size: 1.4rem;
+  }
+
+  .descripcion p {
+    font-size: 1rem;
+  }
+
+  .Lista_Productos img {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+/* Adaptación móvil */
+@media (max-width: 768px) {
+  .Datos {
+    padding: 30px 20px;
+  }
+
+  .Datos .descripcion h1 {
+    font-size: 22px;
+  }
+
+  .Datos .descripcion p {
+    font-size: 15px;
+  }
+
+  .Datos .descripcion li {
+    font-size: 14px;
+  }
+}
 
 
 
