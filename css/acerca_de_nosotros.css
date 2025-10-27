@@ -65,7 +65,8 @@ nav a:hover {
   text-align: center;
 }
 
-.descripcion h1 {
+/* --- Títulos principales --- */
+.Datos h1 {
   color: #ff1616;
   font-size: 1.8rem;
   margin: 40px 0 15px;
@@ -74,7 +75,7 @@ nav a:hover {
   position: relative;
 }
 
-.descripcion h1::after {
+.Datos h1::after {
   content: "";
   display: block;
   width: 80px;
@@ -84,7 +85,8 @@ nav a:hover {
   border-radius: 2px;
 }
 
-.descripcion p {
+/* --- Párrafos --- */
+.Datos p {
   color: #111;
   line-height: 1.7;
   font-size: 1.1rem;
@@ -92,7 +94,8 @@ nav a:hover {
   margin: 0 auto 25px;
 }
 
-.descripcion ul {
+/* --- Lista de valores --- */
+.Datos ul {
   list-style: none;
   padding: 0;
   margin: 20px auto 40px;
@@ -102,7 +105,7 @@ nav a:hover {
   gap: 15px;
 }
 
-.descripcion li {
+.Datos li {
   background: #ff1616;
   color: white;
   padding: 10px 18px;
@@ -113,17 +116,18 @@ nav a:hover {
   transition: transform 0.3s ease;
 }
 
-.descripcion li:hover {
+.Datos li:hover {
   transform: scale(1.05);
 }
 
-/* Galería de productos */
+/* --- Galería de productos --- */
 .Lista_Productos {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 25px;
-  justify-items: center;
-  margin-top: 30px;
+  margin-top: 40px;
+}
+
+.Lista_Productos h1 {
+  color: #ff1616;
+  margin-bottom: 25px;
 }
 
 .Lista_Productos img {
@@ -132,6 +136,7 @@ nav a:hover {
   object-fit: cover;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  margin: 10px;
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
@@ -140,17 +145,35 @@ nav a:hover {
   box-shadow: 0 6px 15px rgba(0,0,0,0.25);
 }
 
-/* Adaptación para pantallas pequeñas */
+/* --- Video --- */
+.Video {
+  margin-top: 60px;
+}
+
+.Video h1 {
+  color: #ff1616;
+  margin-bottom: 25px;
+}
+
+.Video iframe {
+  width: 90%;
+  max-width: 700px;
+  height: 400px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* --- Adaptación a móviles --- */
 @media (max-width: 768px) {
   .Datos {
     padding: 30px 15px;
   }
 
-  .descripcion h1 {
+  .Datos h1 {
     font-size: 1.4rem;
   }
 
-  .descripcion p {
+  .Datos p {
     font-size: 1rem;
   }
 
@@ -158,26 +181,12 @@ nav a:hover {
     width: 150px;
     height: 150px;
   }
-}
 
-/* Adaptación móvil */
-@media (max-width: 768px) {
-  .Datos {
-    padding: 30px 20px;
-  }
-
-  .Datos .descripcion h1 {
-    font-size: 22px;
-  }
-
-  .Datos .descripcion p {
-    font-size: 15px;
-  }
-
-  .Datos .descripcion li {
-    font-size: 14px;
+  .Video iframe {
+    height: 250px;
   }
 }
+
 
 
 
