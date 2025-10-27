@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto - Digicell CR</title>
-    <link rel="stylesheet" href="/css/estilos.css">
     <link rel="stylesheet" href="/css/contacto.css">
 </head>
 <body>
@@ -70,7 +69,7 @@
 
         <div class="formulario-contacto">
             <h2>Formulario de Contacto</h2>
-            <form action="#" method="POST">
+            <form id="miFormulario" action="#" method="POST">
                 <div class="campo-form">
                     <label for="nombre">Nombre Completo *</label>
                     <input type="text" id="nombre" name="nombre" required placeholder="Ingrese su nombre completo">
@@ -124,6 +123,37 @@
             </form>
         </div>
     </div>
+
+<script>document.addEventListener("DOMContentLoaded", () => {
+  const formulario = document.getElementById("miFormulario");
+
+  formulario.onsubmit = function (e) {
+    e.preventDefault(); // Evita recargar la página
+
+    const nombre = document.getElementById("nombre").value;
+    const email = document.getElementById("email").value;
+    const telefono = document.getElementById("telefono").value;
+    const tipoConsulta = document.querySelector('input[name="tipo_consulta"]:checked')?.value || "No especificado";
+    const dispositivo = document.getElementById("dispositivo").value;
+    const mensaje = document.getElementById("mensaje").value;
+
+    // Mostrar mensaje de confirmación simple
+    alert(
+      `✅ Mensaje enviado con éxito.\n\n` +
+      `📋 Detalles:\n` +
+      `Nombre: ${nombre}\n` +
+      `Correo: ${email}\n` +
+      `Teléfono: ${telefono}\n` +
+      `Tipo de consulta: ${tipoConsulta}\n` +
+      `Dispositivo: ${dispositivo || "No especificado"}\n` +
+      `Mensaje: ${mensaje}`
+    );
+
+    // Limpia el formulario
+    formulario.reset();
+  };
+});
+</script>
 
     <footer>
         <div class="footer-top">
