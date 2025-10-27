@@ -1,3 +1,61 @@
+/* Reset y estilos base */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: Arial, Helvetica, sans-serif; background: #f4f4f4; color: #111; background-image: url(/Images/abstract-seamless-white-and-grey-square-3d-pattern-background-modern-geometric-texture-design-illustration-vector.jpg);}
+
+/* Barra superior */
+.topbar {
+  background: black;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px 20px;
+  font-size: 14px;
+}
+
+.topbar .izquierda, .topbar .derecha {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+/* Menú principal */
+nav {
+  background: #ff1616;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 5px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 5px 10px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.search-bar img {
+  vertical-align: middle;
+  margin-left: 5px;
+  height: 24px;
+  width: 24px;
+}
+.search-bar input {
+  padding: 7px 10px;
+  border: none;
+  border-radius: 5px;
+  width: 220px;
+}
+
 .faq-section {
     max-width: 1200px;
     margin: 40px auto;
@@ -123,4 +181,97 @@ details[open] .faq-pregunta span:last-child {  /* Cuando el detalle se despliega
         padding: 15px;
         margin: 10px 15px;
     }
+}
+
+    /* Footer */
+footer {
+  margin-top: auto;
+  background: #ff1616;
+  color: white;
+  text-align: center;
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 35px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 25px 10px;
+}
+
+.footer-top h3 {
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+.footer-top a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 1px;
+}
+
+.footer-top a:hover {
+  text-decoration: underline;
+}
+
+/* Íconos sociales */
+.social-iconos {
+  display: grid;
+  grid-template-columns: repeat(2, 40px);
+  grid-template-rows: repeat(2, 40px);
+  justify-content: center;
+  align-items: center;
+  gap: 15px 30px;
+  margin: 0 auto;
+}
+
+.social-iconos a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  background: white;
+  border-radius: 51%;
+  transition: transform 0.2s ease;
+}
+
+.social-iconos img {
+  width: 28px;
+  height: 28px;
+}
+
+/* Formulario newsletter */
+.lo-mas-nuevo {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  justify-content: center;
+}
+
+.lo-mas-nuevo input {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  width: 180px;
+}
+
+.lo-mas-nuevo button {
+  background: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Footer inferior */
+.footer-bottom {
+  background: black;
+  color: #ccc;
+  padding: 15px;
+  font-size: 14px;
+  text-align: center;
 }
