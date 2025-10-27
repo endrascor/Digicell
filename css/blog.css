@@ -11,7 +11,8 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-image: url(Images/abstract-seamless-white-and-grey-square-3d-pattern-background-modern-geometric-texture-design-illustration-vector.jpg);
+  background-image: url(Images/abstract-seamless-white-and-grey-square-3d-pattern-background-modern-geometric-texture-design-illustration-vector.jpg)
+
 }
 
 main {

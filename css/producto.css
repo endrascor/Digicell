@@ -1,6 +1,11 @@
 /* Reset y estilos base */
 * { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: Arial, Helvetica, sans-serif; background: #f4f4f4; color: #111; background-image: url(Images/abstract-seamless-white-and-grey-square-3d-pattern-background-modern-geometric-texture-design-illustration-vector.jpg);}
+body { 
+  font-family: Arial, Helvetica, sans-serif;
+   background: #f4f4f4; color: #111;
+   background-image: url(/Images/abstract-seamless-white-and-grey-square-3d-pattern-background-modern-geometric-texture-design-illustration-vector.jpg);
+  
+}
 
 /* Barra superior */
 .topbar {
