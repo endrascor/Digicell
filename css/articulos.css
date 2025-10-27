@@ -237,7 +237,10 @@ ul li {
   font-weight: 500;
 }
 
-
+    .regresar, .regresar h2 {
+      text-align: center;
+      color: black;
+    }
 
 /* Footer */
 footer {

@@ -187,9 +187,10 @@ nav a:hover {
   }
 }
 
-
-
-
+    .regresar, .regresar h2 {
+      text-align: center;
+      color: black;
+    }
 
 /* Footer */
 footer {

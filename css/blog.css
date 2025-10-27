@@ -244,6 +244,11 @@ nav a:hover {
   background: #e60000;
 }
 
+    .regresar, .regresar h2 {
+      text-align: center;
+      color: black;
+    }
+
 /* Footer */
 footer {
   margin-top: auto;
