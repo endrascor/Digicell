@@ -93,6 +93,12 @@ details[open] .faq-pregunta span:last-child {  /* Cuando el detalle se despliega
     color: #666;
     font-style: oblique;
 }
+
+    .regresar, .regresar h2 {
+      text-align: center;
+      color: black;
+    }
+    
 /* Media Queries */
 @media screen and (max-width: 768px) {
     .faq-section {
