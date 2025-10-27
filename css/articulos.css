@@ -108,7 +108,7 @@ body {
   margin-right: 10px;
 }
 .rojo {
-  background: #e20000;
+  background: #ff1616;
 }
 .texto-comentario {
   background: #f1f1f1;
@@ -141,7 +141,7 @@ body {
 }
 .form-comentario button {
   margin-top: 15px;
-  background: #e20000;
+  background: #ff1616;
   color: white;
   border: none;
   padding: 10px 15px;
@@ -149,7 +149,7 @@ body {
   cursor: pointer;
 }
 .form-comentario button:hover {
-  background: #c60000;
+  background: #ff1616;
 }
 
 /* Sidebar */
@@ -172,7 +172,7 @@ body {
 .sidebar button {
   margin-top: 10px;
   width: 100%;
-  background: #e20000;
+  background: #ff1616;
   color: #fff;
   border: none;
   padding: 8px;
@@ -198,7 +198,7 @@ ul li {
 .raya {
   width: 3px;
   height: 25px;
-  background: #e20000;
+  background: #ff1616;
   display: inline-block;
   margin-right: 8px;
   border-radius: 3px;
