@@ -60,6 +60,11 @@ nav a:hover {
   font-size: 18px;
   margin: 20px 0;
   text-align: center;
+  font-style: oblique;
+}
+
+.descripcion h1{
+  color: #ff1616;
 }
 
 /* Productos */
