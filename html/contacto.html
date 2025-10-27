@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Digicell CR</title>
+    <link rel="stylesheet" href="/css/contacto.css">
+</head>
+<body>
+    <div class="topbar">
+        <div class="izquierda">
+            <span>Todo en Tecnología</span>
+            <span>Desbloqueo</span>
+            <span>Servicios</span>
+            <span>Repuestos</span>
+            <span>Reparación</span>
+        </div>
+        <div class="derecha">
+            <span>Taller</span>
+            <span>Venta de tarjetas y recargas</span>
+            <span>Accesorios para celular</span>
+        </div>
+    </div>
+
+    <nav>
+        <img width="50" height="60" src="/Images/logo.jpg" alt="Logo Digicell">
+        <a href="index.html">Inicio</a>
+        <a href="#">Celulares</a>
+        <a href="#">Reparación</a>
+        <a href="#">Estuches</a>
+        <div class="search-bar">
+            <input type="text" placeholder="Buscar...">
+            <a href="#"><img src="/Images/search_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png" alt="Buscar"></a>
+        </div>
+        <a href="#">Audífonos</a>
+        <a href="#">Cargadores</a>
+        <a href="faq.html">FAQ</a>
+        <div class="usuario-carrito">
+            <a href="#"><img width="40" height="40" src="/Images/avatar.png" alt="Usuario"></a>
+            <a href="#"><img width="40" height="40" src="/Images/carro-de-la-compra.png" alt="Carrito"></a>
+        </div>
+    </nav>
+
+    <div class="contacto-container">
+        <div class="info-contacto">
+            <h2>Información de Contacto</h2>
+            
+            <div class="info-item">
+                <h3> Dirección</h3>
+                <p>San Rafael de Alajuela<br>Costa Rica</p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d245.59930539476366!2d-84.2238369!3d9.9681213!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e0!3m2!1sen!2scr!4v1761455225477!5m2!1sen!2scr" width="600" height="450"></iframe>
+            </div>
+
+            <div class="info-item">
+                <h3> Teléfono</h3>
+                <p>89082962</p>
+            </div>
+
+            <div class="info-item">
+                <h3>Horario de Atención</h3>
+                <p>Lunes a Sábado<br>9:30 AM - 7:00 PM</p>
+            </div>
+
+            <div class="info-item">
+                <h3>Correo Electrónico</h3>
+                <p>Dixmo.ds@gmail.com</p>
+            </div>
+        </div>
+
+        <div class="formulario-contacto">
+            <h2>Formulario de Contacto</h2>
+            <form id="miFormulario" action="#" method="POST">
+                <div class="campo-form">
+                    <label for="nombre">Nombre Completo *</label>
+                    <input type="text" id="nombre" name="nombre" required placeholder="Ingrese su nombre completo">
+                </div>
+
+                <div class="campo-form">
+                    <label for="email">Correo Electrónico *</label>
+                    <input type="email" id="email" name="email" required placeholder="ejemplo@correo.com">
+                </div>
+
+                <div class="campo-form">
+                    <label for="telefono">Teléfono</label>
+                    <input type="tel" id="telefono" name="telefono" placeholder="1234-5678">
+                </div>
+
+                <div class="campo-form">
+                    <label>Tipo de Consulta *</label>
+                    <div class="opciones-radio">
+                        <div class="opcion-radio">
+                            <input type="radio" id="reparacion" name="tipo_consulta" value="reparacion" required>
+                            <label for="reparacion">Reparación</label>
+                        </div>
+                        <div class="opcion-radio">
+                            <input type="radio" id="compra" name="tipo_consulta" value="compra">
+                            <label for="compra">Compra</label>
+                        </div>
+                        <div class="opcion-radio">
+                            <input type="radio" id="otro" name="tipo_consulta" value="otro">
+                            <label for="otro">Otro</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="campo-form">
+                    <label for="dispositivo">Tipo de Servicio</label>
+                    <select id="dispositivo" name="dispositivo">
+                        <option value="">Seleccione un servicio</option>
+                        <option value="celular">Celular</option>
+                        <option value="estuche">Estuche</option>
+                        <option value="Auriculares">Auriculares</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </div>
+
+                <div class="campo-form">
+                    <label for="mensaje">Mensaje *</label>
+                    <textarea id="mensaje" name="mensaje" required placeholder="Describa su consulta..."></textarea>
+                </div>
+
+                <button type="submit" class="btn-enviar">Enviar Mensaje</button>
+            </form>
+        </div>
+    </div>
+
+      <div class="regresar">
+    <a href="index.html"><h2>Regresar</h2></a>
+    <a href="index.html"><img width="80px" src="/Images/flecha-izquierda.png" alt="flecha-izquierda"></a>
+  </div>
+  
+<script>document.addEventListener("DOMContentLoaded", () => {
+  const formulario = document.getElementById("miFormulario");
+
+  formulario.onsubmit = function (e) {
+    e.preventDefault(); // Evita recargar la página
+
+    const nombre = document.getElementById("nombre").value;
+    const email = document.getElementById("email").value;
+    const telefono = document.getElementById("telefono").value;
+    const tipoConsulta = document.querySelector('input[name="tipo_consulta"]:checked')?.value || "No especificado";
+    const dispositivo = document.getElementById("dispositivo").value;
+    const mensaje = document.getElementById("mensaje").value;
+
+    // Mostrar mensaje de confirmación simple
+    alert(
+      `✅ Mensaje enviado con éxito.\n\n` +
+      `📋 Detalles:\n` +
+      `Nombre: ${nombre}\n` +
+      `Correo: ${email}\n` +
+      `Teléfono: ${telefono}\n` +
+      `Tipo de consulta: ${tipoConsulta}\n` +
+      `Dispositivo: ${dispositivo || "No especificado"}\n` +
+      `Mensaje: ${mensaje}`
+    );
+
+    // Limpia el formulario
+    formulario.reset();
+  };
+});
+</script>
+
+    <footer>
+        <div class="footer-top">
+            <div>
+                <a href="acerca_de_nosotros.html"><h3>Acerca de Nosotros</h3></a>
+                <div class="social-iconos">
+                    <a href="https://www.facebook.com/digicellcr?mibextid=wwXIfr&rdid=2DJnOGPOuTlvaeyI&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F14Lvy1FkFeQ%2F%3Fmibextid%3DwwXIfr#"><img src="/Images/facebook.png" alt="Facebook"></a>
+                    <a href="https://www.instagram.com/digicellcr/?igsh=MXIzcXRqdXh6a3E0OQ%3D%3D#"><img src="/Images/instagram.png" alt="Instagram"></a>
+                    <a href="https://api.whatsapp.com/send?phone=%2B50689082962&fbclid=IwVERDUANonoJleHRuA2FlbQIxMAABHjc1VXu8AgMg59hcxSFNCaO0JDqgauUTUbJAHXhORFvG-yzyk1BGI7rTnWCb_aem_7SgqFlS5UCPlm7FW9nM_zg"><img src="/Images/whatsapp.png" alt="WhatsApp"></a>
+                    <a href="https://www.tiktok.com/@dixmo19?_t=ZM-90p6Gs0Njz9&_r=1"><img src="/Images/tiktok.png" alt="tik-tok"></a>
+                </div>
+            </div>
+            <div>
+                <h3>Horario de atención y ubicacion</h3>
+                <p>San Rafael<br>de Alajuela</p><br>
+                <p>Lunes a sabado <br>9:30 am - 7:00 pm</p>
+            </div>
+            <div>
+                <a id="logofooter" href="index.html"><img width="150" height="150" src="/Images/DI - 1.png" alt="Logo Digicell"></a>
+            </div>
+            <div>
+                <h3>Contactanos</h3>
+                <p>Numero telefonico: 89082962</p><br>
+                <p>Correo electrónico: Dixmo.ds@gmail.com</p><br>
+                <p><a href="acerca_de.html">Equipo de desarrollo</a></p>
+            </div>
+            <div>
+                <h3>Recibe las ultimas noticias</h3>
+                <div class="lo-mas-nuevo">
+                    <input type="email" placeholder="Email">
+                    <button>→</button>
+                </div>
+                <a href="nuestroBlog.html"><br><h3>Nuestro Blog</h3></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © Digicell CR Costa Rica - 2025. Todos los Derechos Reservados.
+        </div>
+    </footer>
+</body>
+</html>

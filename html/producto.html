@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Detalle del Producto - Digicell CR</title>
+  <link rel="stylesheet" href="/css/producto.css">
+</head>
+<body>
+  <div class="topbar">
+    <div class="izquierda">
+      <span>Todo en Tecnología</span>
+      <span>Desbloqueo</span>
+      <span>Servicios</span>
+      <span>Repuestos</span>
+      <span>Reparación</span>
+    </div>
+    <div class="derecha">
+      <span>Taller</span>
+      <span>Venta de tarjetas y recargas</span>
+      <span>Accesorios para celular</span>
+    </div>
+  </div>
+
+  <nav>
+    <img width="50" height="60" src="/Images/logo.jpg" alt="Logo Digicell">
+    <a href="index.html">Inicio</a>
+    <a href="#">Celulares</a>
+    <a href="#">Reparación</a>
+    <a href="#">Estuches</a>
+    <div class="search-bar">
+      <input type="text" placeholder="Buscar...">
+      <a href="#"><img src="/Images/search_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png" alt="Buscar"></a>
+    </div>
+    <a href="#">Audífonos</a>
+    <a href="#">Cargadores</a>
+    <a href="faq.html">FAQ</a>
+    <div class="usuario-carrito">
+      <a href="#"><img width="40" height="40" src="/Images/avatar.png" alt="Usuario"></a>
+      <a href="#"><img width="40" height="40" src="/Images/carro-de-la-compra.png" alt="Carrito"></a>
+    </div>
+  </nav>
+
+  <main id="contenedor-producto"></main>
+
+  <div class="regresar">
+    <a href="index.html"><h2>Regresar</h2></a>
+    <a href="index.html"><img width="80px" src="/Images/flecha-izquierda.png" alt="flecha-izquierda"></a>
+  </div>
+
+  <footer>
+    <div class="footer-top">
+      <div>
+        <a href="acerca_de_nosotros.html"><h3>Acerca de Nosotros</h3></a>
+        <div class="social-iconos">
+          <a href="https://www.facebook.com/digicellcr?mibextid=wwXIfr&rdid=2DJnOGPOuTlvaeyI&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F14Lvy1FkFeQ%2F%3Fmibextid%3DwwXIfr#"><img src="/Images/facebook.png" alt="Facebook"></a>
+          <a href="https://www.instagram.com/digicellcr/?igsh=MXIzcXRqdXh6a3E0OQ%3D%3D#"><img src="/Images/instagram.png" alt="Instagram"></a>
+          <a href="https://api.whatsapp.com/send?phone=%2B50689082962"><img src="/Images/whatsapp.png" alt="WhatsApp"></a>
+          <a href="https://www.tiktok.com/@dixmo19?_t=ZM-90p6Gs0Njz9&_r=1"><img src="/Images/tiktok.png" alt="TikTok"></a>
+        </div>
+      </div>
+      <div>
+        <h3>Horario de atención y ubicación</h3>
+        <p>San Rafael de Alajuela</p><br>
+        <p>Lunes a sábado <br>9:30 am - 7:00 pm</p>
+      </div>
+      <div>
+        <a id="logofooter" href="index.html"><img width="150" height="150" src="/Images/DI - 1.png" alt="Logo Digicell"></a>
+      </div>
+      <div>
+        <h3>Contáctanos</h3>
+        <p>Teléfono: 8908-2962</p><br>
+        <p>Correo electrónico: <a href="mailto:Dixmo.ds@gmail.com">Dixmo.ds@gmail.com</a></p><br>
+        <p><a href="acerca_de.html">Equipo de desarrollo</a></p>
+      </div>
+      <div>
+        <h3>Recibe las últimas noticias</h3>
+        <div class="lo-mas-nuevo">
+          <input type="email" placeholder="Email">
+          <button>→</button>
+        </div>
+        <a href="nuestroBlog.html"><br><h3>Nuestro Blog</h3></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © Digicell CR Costa Rica - 2025. Todos los Derechos Reservados.
+    </div>
+  </footer>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get("id");
+
+    const productos = {
+      1: {
+        nombre: "iPhone 15 Pro",
+        descripcion: "El nuevo iPhone 15 Pro con chip A17 Pro y cuerpo de titanio.",
+        precio: "₡750,000",
+        imagen: "/Images/celular1.png",
+        caracteristicas: [
+          "Pantalla OLED de 6.1 pulgadas",
+          "Cámara triple de 48 MP",
+          "Chip A17 Pro",
+          "Carga rápida y MagSafe"
+        ]
+      },
+      2: {
+        nombre: "Poptel P60",
+        descripcion: "Potente, elegante y con cámara profesional.",
+        precio: "₡680,000",
+        imagen: "/Images/celular2.jpg",
+        caracteristicas: [
+          "Pantalla de 5.7 pulgadas",
+          "Cámara principal de 16 MP",
+          "MediaTek Helio P23",
+          "Resistencia IP68"
+        ]
+      },
+      3: {
+        nombre: "Honor X6A",
+        descripcion: "Diseño elegante y funcionalidad excepcional.",
+        precio: "₡680,000",
+        imagen: "/Images/celular3.png",
+        caracteristicas: [
+          "Pantalla de 6.5 pulgadas",
+          "Cámara principal de 50 MP",
+          "Mediatek Helio G36",
+          "Resistencia IP68"
+        ]
+      },
+      4: {
+        nombre: "Samsung Galaxy Z Fold 7",
+        descripcion: "La séptima generación del foldable smartphone estilo libro de Samsung.",
+        precio: "₡680,000",
+        imagen: "/Images/fold7.jpg",
+        caracteristicas: [
+          "Pantalla de 6.5 pulgadas en ambos lados",
+          "Cámara principal de 200 MP",
+          "Procesador Snapdragon 8 Elite",
+          "Resistencia IP68"
+        ]
+      },
+      5: {
+        nombre: "iPhone 17 Pro Max",
+        descripcion: "Nuevo diseño patentado: la funda tipo cartera solo es compatible con iPhone 17 Pro Max de 6.9 pulgadas.",
+        precio: "₡680,000",
+        imagen: "/Images/iphone17promax.jpg",
+        caracteristicas: [
+          "Pantalla de 6.9 pulgadas",
+          "Cámara principal de 200 MP",
+          "Procesador Snapdragon 8 Elite",
+          "Resistencia IP68"
+        ]
+      },
+      6: {
+        nombre: "Tecno Pova 4",
+        descripcion: "El Tecno Pova 4 con batería de larga duración y rendimiento fluido.",
+        precio: "₡450,000",
+        imagen: "/Images/celular6.png",
+        caracteristicas: [
+          "Pantalla 6.78'' FHD+ AMOLED",
+          "Cámara de 50 MP",
+          "Procesador MediaTek G99 Ultimate"
+        ]
+      },
+      7: {
+        nombre: "OUKITEL WP53S",
+        descripcion: "El teléfono inteligente OUKITEL WP53S es perfecto para aventuras al aire libre y trabajo prolongado.",
+        precio: "₡300,000",
+        imagen: "/Images/celular7.png",
+        caracteristicas: [
+          "Pantalla 6.52'' HD+ IPS",
+          "Cámara de 13 MP",
+          "Procesador Octa-core T615",
+          "IP68/IP69K y MIL-STD-810G"
+        ]
+      },
+      8: {
+        nombre: "Samsung Galaxy S25 Ultra",
+        descripcion: "El Samsung Galaxy S25 Ultra es un teléfono inteligente de alta gama con características avanzadas.",
+        precio: "₡1,200,000",
+        imagen: "/Images/celular8.png",
+        caracteristicas: [
+          "Pantalla 6.9'' QHD+ AMOLED",
+          "Cámara de 200 MP",
+          "Procesador Snapdragon 8 Gen 3",
+          "S-Pen integrado"
+        ]
+      },
+      9: {
+        nombre: "OUKITEL WP28S",
+        descripcion: "El OUKITEL WP28S es un teléfono resistente diseñado para entornos difíciles.",
+        precio: "₡250,000",
+        imagen: "/Images/celular9.jpg",
+        caracteristicas: [
+          "Pantalla 6.52'' HD+ IPS",
+          "Cámara de 13 MP",
+          "Procesador Google Tensor G3",
+          "Resistencia IP68/IP69K y MIL-STD-810GH"
+        ]
+      },
+      10: {
+        nombre: "ROG 5 Ultimate",
+        descripcion: "Libera un rendimiento de juego inigualable con el último chip Snapdragon 8 Gen 2, 16 GB de RAM y 512 GB de almacenamiento.",
+        precio: "₡1,100,000",
+        imagen: "/Images/celular10.png",
+        caracteristicas: [
+          "Pantalla 6.78'' FHD+ IPS",
+          "Cámara de 50 MP y selfie de 32 MP",
+          "Procesador Snapdragon 888 5G",
+          "Batería de 6000 mAh"
+        ]
+      }
+    };
+
+    const contenedor = document.getElementById("contenedor-producto");
+    const producto = productos[id];
+
+    if (producto) {
+      contenedor.innerHTML = `
+        <div class="producto-detalle">
+          <img src="${producto.imagen}" alt="${producto.nombre}">
+          <div class="producto-info">
+            <h1>${producto.nombre}</h1>
+            <p>${producto.descripcion}</p>
+            <p class="precio">${producto.precio}</p>
+            <div class="caracteristicas">
+              <h2>Características principales:</h2>
+              <ul>
+                ${producto.caracteristicas.map(c => `<li>${c}</li>`).join("")}
+              </ul>
+            </div>
+          </div>
+        </div>
+      `;
+    } else {
+      contenedor.innerHTML = `
+        <p style="text-align:center; margin:50px;">No se encontró información del producto.</p>
+      `;
+    }
+  </script>
+</body>
+</html>
+
