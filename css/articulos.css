@@ -49,7 +49,7 @@ body {
   border-radius: 12px;
 }
 
-.contenido img {
+.contenido .img-grid{
   width: 100%;
   max-width: none;
   height: auto;
