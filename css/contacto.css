@@ -7,14 +7,14 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background: #f4f4f4 url(Images/abstract-seamless-white-and-grey-square-3d-pattern-background-modern-geometric-texture-design-illustration-vector.jpg);
-  color: #111;
+  background: #ffffff url("../Images/abstract-seamless-white-and-grey-square-3d-pattern-background-modern-geometric-texture-design-illustration-vector.jpg");
+  color: #000000;
 }
 
 /* ======= Barra superior ======= */
 .topbar {
-  background: black;
-  color: white;
+  background: #000000;
+  color: #ffffff;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -44,7 +44,7 @@ nav {
 }
 
 nav a {
-  color: white;
+  color: #ffffff;
   text-decoration: none;
   font-weight: bold;
   font-size: 18px;
@@ -111,11 +111,11 @@ nav a:hover {
     text-align: center;
     padding: 12px 0;
     font-size: 18px;
-    color: white;
+    color: #ffffff;
   }
 
   #main-nav .search-bar {
-    background: white;
+    background: #ffffff;
     border-radius: 5px;
     padding: 5px;
     width: 90%;
@@ -154,7 +154,7 @@ nav a:hover {
 
 .info-contacto,
 .formulario-contacto {
-  background: white;
+  background: #ffffff;
   padding: 30px;
   border-radius: 12px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -214,7 +214,7 @@ nav a:hover {
 .campo-form select {
   width: 100%;
   padding: 12px;
-  border: 1px solid #ddd;
+  border: 1px solid #ffffff;
   border-radius: 6px;
   font-size: 16px;
   transition: border-color 0.3s ease;
@@ -240,7 +240,7 @@ nav a:hover {
 
 .btn-enviar {
   background: #ff1616;
-  color: white;
+  color: #ffffff;
   padding: 14px 20px;
   border: none;
   border-radius: 6px;
@@ -251,7 +251,7 @@ nav a:hover {
   transition: background 0.3s ease;
 }
 
-.btn-enviar:hover { background: #e60000; }
+.btn-enviar:hover { background: #ff1616; }
 
 /* ======= Responsividad ======= */
 @media (max-width: 1024px) {
@@ -309,7 +309,7 @@ nav a:hover {
 footer {
   margin-top: auto;
   background: #ff1616;
-  color: white;
+  color: #ffffff;
   text-align: center;
 }
 
@@ -333,7 +333,7 @@ footer {
 }
 
 .footer-top a {
-  color: white;
+  color: #ffffff;
   text-decoration: none;
   display: inline-block;
   margin-bottom: 5px;
@@ -359,7 +359,7 @@ footer {
   justify-content: center;
   width: 28px;
   height: 28px;
-  background: white;
+  background: #ffffff;
   border-radius: 51%;
   transition: transform 0.2s ease;
 }
@@ -392,7 +392,7 @@ footer {
 }
 
 .lo-mas-nuevo button {
-  background: white;
+  background: #ffffff;
   color: #ff1616;
   border: none;
   padding: 10px 20px;
@@ -403,11 +403,11 @@ footer {
 }
 
 .lo-mas-nuevo button:hover {
-  background: #f0f0f0;
+  background: #ffffff;
 }
 
 .footer-bottom {
-  background: black;
+  background: #000000;
   color: #ccc;
   padding: 15px;
   font-size: 14px;

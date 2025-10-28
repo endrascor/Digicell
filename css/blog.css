@@ -6,12 +6,12 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background: #f4f4f4;
-  color: #111;
+  background: #ffffff;
+  color: #000000;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-image: url(Images/abstract-seamless-white-and-grey-square-3d-pattern-background-modern-geometric-texture-design-illustration-vector.jpg)
+  background-image: url("../Images/abstract-seamless-white-and-grey-square-3d-pattern-background-modern-geometric-texture-design-illustration-vector.jpg")
 
 }
 
@@ -21,8 +21,8 @@ main {
 
 /* Barra superior */
 .topbar {
-  background: black;
-  color: white;
+  background: #000000;
+  color: #ffffff;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -50,7 +50,7 @@ nav {
 }
 
 nav a {
-  color: white;
+  color: #ffffff;
   text-decoration: none;
   font-weight: bold;
   font-size: 18px;
@@ -117,7 +117,7 @@ nav a:hover {
     text-align: center;
     padding: 10px 0;
     font-size: 18px;
-    color: white;
+    color: #ffffff;
     text-decoration: none;
   }
 
@@ -132,7 +132,7 @@ nav a:hover {
     width: 90%;
     max-width: 300px;
     margin: 10px 0;
-    background-color: white;
+    background-color: #ffffff;
     border-radius: 5px;
     padding: 5px;
   }
@@ -170,7 +170,7 @@ nav a:hover {
 /* Blog principal */
 .blog-principal {
   background: #ff1a1a;
-  color: white;
+  color: #ffffff;
   text-align: center;
   padding: 40px 20px;
   position: relative;
@@ -198,8 +198,8 @@ nav a:hover {
 
 .categorias-section h2 {
   font-size: 24px;
-  color: #111;
-  background: white;
+  color: #000000;
+  background: #ffffff;
   padding: 30px 20px 10px;
   border-radius: 20px 20px 0 0;
   font-weight: 700;
@@ -214,13 +214,13 @@ nav a:hover {
   gap: 15px;
   flex-wrap: wrap;
   padding: 0 20px 30px;
-  background: white;
+  background: #ffffff;
   border-radius: 0 0 20px 20px;
   box-shadow: 0 4px 20px rgba(203, 13, 13, 0.1);
 }
 
 .categorias button {
-  background: #e8e8e8;
+  background: #ffffff;
   color: #131613;
   border: none;
   padding: 12px 24px;
@@ -233,7 +233,7 @@ nav a:hover {
 
 
 .categorias button:hover {
-  background: #e60000;
+  background: #ff1616;
   
 }
 
@@ -251,7 +251,7 @@ nav a:hover {
 
 
 .categoria-tag {
-  color: red;
+  color: #ff1616;
   border-radius: 12px;
   font-size: 17px;
   font-weight: bold;
@@ -283,7 +283,7 @@ nav a:hover {
 }
 
 .btn-ver:hover {
-  background: #e60000;
+  background: #ff1616;
 }
 
 .producto img {
@@ -325,8 +325,8 @@ nav a:hover {
 }
 
 .paginacion button {
-  background: black;
-  color:#f4f4f4;
+  background: #000000;
+  color:#ffffff;
   border: none;
   padding: 10px 18px;
   border-radius: 5px;
@@ -336,19 +336,19 @@ nav a:hover {
 
 .paginacion button.activo,
 .paginacion button:hover {
-  background: #e60000;
+  background: #ff1616;
 }
 
     .regresar, .regresar h2 {
       text-align: center;
-      color: black;
+      color: #000000;
     }
 
 /* ===== Footer ===== */
 footer {
   margin-top: auto;
   background: #ff1616;
-  color: white;
+  color: #ffffff;
   text-align: center;
 }
 
@@ -372,7 +372,7 @@ footer {
 }
 
 .footer-top a {
-  color: white;
+  color: #ffffff;
   text-decoration: none;
   display: inline-block;
   margin-bottom: 5px;
@@ -398,7 +398,7 @@ footer {
   justify-content: center;
   width: 28px;
   height: 28px;
-  background: white;
+  background: #ffffff;
   border-radius: 51%;
   transition: transform 0.2s ease;
 }
@@ -431,7 +431,7 @@ footer {
 }
 
 .lo-mas-nuevo button {
-  background: white;
+  background: #ffffff;
   color: #ff1616;
   border: none;
   padding: 10px 20px;
@@ -442,11 +442,11 @@ footer {
 }
 
 .lo-mas-nuevo button:hover {
-  background: #f0f0f0;
+  background: #ffffff;
 }
 
 .footer-bottom {
-  background: black;
+  background: #000000;
   color: #ccc;
   padding: 15px;
   font-size: 14px;

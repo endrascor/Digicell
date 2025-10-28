@@ -1,11 +1,11 @@
 /* Reset y estilos base */
 * { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: Arial, Helvetica, sans-serif; background: #f4f4f4; color: #111; background-image: url(Images/6g.PNG)}
+body { font-family: Arial, Helvetica, sans-serif; background: #ffffff; color: #000000; background-image: url("../Images/abstract-seamless-white-and-grey-square-3d-pattern-background-modern-geometric-texture-design-illustration-vector.jpg")}
 
 /* Barra superior */
 .topbar {
-  background: black;
-  color: white;
+  background: #000000;
+  color: #ffffff;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -33,7 +33,7 @@ nav {
 }
 
 nav a {
-  color: white;
+  color: #ffffff;
   text-decoration: none;
   font-weight: bold;
   font-size: 18px;
@@ -100,7 +100,7 @@ nav a:hover {
     text-align: center;
     padding: 10px 0;
     font-size: 18px;
-    color: white;
+    color: #ffffff;
     text-decoration: none;
   }
 
@@ -115,7 +115,7 @@ nav a:hover {
     width: 90%;
     max-width: 300px;
     margin: 10px 0;
-    background-color: white;
+    background-color: #ffffff;
     border-radius: 5px;
     padding: 5px;
   }
@@ -183,8 +183,8 @@ nav a:hover {
 }
 .producto p { margin: 20px 0; font-weight: bold; }
 .btn-ver {
-  background: #111;
-  color: white;
+  background: #000000;
+  color: #ffffff;
   padding: 9px 16px;
   border-radius: 20px;
   text-decoration: none;
@@ -207,7 +207,7 @@ nav a:hover {
 footer {
   margin-top: auto;
   background: #ff1616;
-  color: white;
+  color: #ffffff;
   text-align: center;
 }
 
@@ -231,7 +231,7 @@ footer {
 }
 
 .footer-top a {
-  color: white;
+  color: #ffffff;
   text-decoration: none;
   display: inline-block;
   margin-bottom: 5px;
@@ -257,7 +257,7 @@ footer {
   justify-content: center;
   width: 28px;
   height: 28px;
-  background: white;
+  background: #ffffff;
   border-radius: 51%;
   transition: transform 0.2s ease;
 }
@@ -290,7 +290,7 @@ footer {
 }
 
 .lo-mas-nuevo button {
-  background: white;
+  background: #ffffff;
   color: #ff1616;
   border: none;
   padding: 10px 20px;
@@ -301,7 +301,7 @@ footer {
 }
 
 .lo-mas-nuevo button:hover {
-  background: #f0f0f0;
+  background: #ffffff;
 }
 
 .footer-bottom {

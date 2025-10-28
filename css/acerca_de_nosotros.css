@@ -1,11 +1,11 @@
 * Reset y estilos base */
 * { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: Arial, Helvetica, sans-serif; background: #f4f4f4; color: #111; background-image: url(Images/abstract-seamless-white-and-grey-square-3d-pattern-background-modern-geometric-texture-design-illustration-vector.jpg);}
+body { font-family: Arial, Helvetica, sans-serif; background: #ffffff; color: #000000; background-image: url("../Images/abstract-seamless-white-and-grey-square-3d-pattern-background-modern-geometric-texture-design-illustration-vector.jpg");}
 
 /* Barra superior */
 .topbar {
-  background: black;
-  color: white;
+  background: #000000;
+  color: #ffffff;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -32,7 +32,7 @@ nav {
 }
 
 nav a {
-  color: white;
+  color: #ffffff;
   text-decoration: none;
   font-weight: bold;
   font-size: 18px;
@@ -113,7 +113,7 @@ nav a:hover {
     width: 90%;
     max-width: 300px;
     margin: 10px 0;
-    background-color: white;
+    background-color: #ffffff;
     border-radius: 5px;
     padding: 5px;
   }
@@ -199,7 +199,7 @@ nav a:hover {
 
 .Datos li {
   background: #ff1616;
-  color: white;
+  color: #ffffff;
   padding: 10px 18px;
   border-radius: 25px;
   font-weight: bold;
@@ -288,7 +288,7 @@ nav a:hover {
 footer {
   margin-top: auto;
   background: #ff1616;
-  color: white;
+  color: #ffffff;
   text-align: center;
 }
 
@@ -312,7 +312,7 @@ footer {
 }
 
 .footer-top a {
-  color: white;
+  color: #ffffff;
   text-decoration: none;
   display: inline-block;
   margin-bottom: 5px;
@@ -371,7 +371,7 @@ footer {
 }
 
 .lo-mas-nuevo button {
-  background: white;
+  background: #ffffff;
   color: #ff1616;
   border: none;
   padding: 10px 20px;
@@ -382,11 +382,11 @@ footer {
 }
 
 .lo-mas-nuevo button:hover {
-  background: #f0f0f0;
+  background: #ffffff;
 }
 
 .footer-bottom {
-  background: black;
+  background: #000000;
   color: #ccc;
   padding: 15px;
   font-size: 14px;
