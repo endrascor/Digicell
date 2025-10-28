@@ -1,3 +1,4 @@
+/* ===== Reset base ===== */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -8,14 +9,16 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   background: #f4f4f4;
   color: #111;
+  line-height: 1.6;
 }
 
-/* Encabezado */
+/* ===== Encabezado ===== */
 .encabezado {
   padding: 30px;
   text-align: left;
   background: #fff;
 }
+
 .encabezado .categoria {
   background: #111;
   color: #fff;
@@ -24,16 +27,18 @@ body {
   border-radius: 12px;
   font-size: 0.9rem;
 }
+
 .encabezado h1 {
   margin-top: 10px;
   font-size: 1.8rem;
 }
+
 .encabezado .autor {
   color: #666;
   font-size: 0.9rem;
 }
 
-/* Layout principal */
+/* ===== Layout principal ===== */
 .contenedor {
   display: flex;
   justify-content: space-between;
@@ -41,61 +46,93 @@ body {
   gap: 25px;
 }
 
-/* Contenido derecho */
+/* ===== Contenido derecho ===== */
 .contenido {
-  flex: 1;
+  flex: 2;
   background: #fff;
   padding: 20px;
   border-radius: 12px;
 }
 
-.contenido .img-grid{
-  width: 100%;
-  max-width: none;
-  height: auto;
-  border-radius: 8px;
+/* Imágenes principales y grids */
+.contenido .img-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
   margin-bottom: 20px;
 }
 
-.contenido p {
-  line-height: 1.6;
+.contenido .img-grid img,
+.contenido > img {
+  width: 100%;
+  height: auto;
+  max-width: 600px;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto;
+  transition: transform 0.3s ease;
 }
 
-/* Tablas dentro de los artículos: estilo legible y responsive */
-.contenido table {
+.contenido .img-grid img:hover {
+  transform: scale(1.05);
+}
+
+.contenido p {
+  margin-bottom: 15px;
+}
+
+.tabla-responsive {
+  overflow-x: auto;
+  margin-bottom: 20px;
+}
+
+.tabla-responsive table {
   width: 100%;
   border-collapse: collapse;
-  margin: 15px 0;
-  background: #fff;
-  border-radius: 8px;
-  overflow: hidden;
+  min-width: 600px; /* Fuerza scroll si es más pequeña que la pantalla */
 }
-.contenido th,
-.contenido td {
+
+.tabla-responsive th,
+.tabla-responsive td {
   border: 1px solid #e6e6e6;
   padding: 10px 12px;
   text-align: left;
-  vertical-align: top;
 }
-.contenido thead th {
+
+.tabla-responsive thead th {
   background: #d2d0d0e2;
   font-weight: 700;
   color: #111;
 }
-.contenido tbody tr:nth-child(even) {
+
+.tabla-responsive tbody tr:nth-child(even) {
   background: #fbfbfb;
 }
 
-/* Comentarios */
+/* Ajuste para móviles */
+@media (max-width: 480px) {
+  .tabla-responsive table {
+    font-size: 14px;
+  }
+  .tabla-responsive th,
+  .tabla-responsive td {
+    padding: 8px 10px;
+  }
+}
+
+/* ===== Comentarios ===== */
 .comentarios {
   margin-top: 25px;
 }
+
 .comentario {
   display: flex;
   align-items: flex-start;
   margin-top: 15px;
-  
 }
+
 .avatar {
   width: 45px;
   height: 45px;
@@ -107,26 +144,28 @@ body {
   justify-content: center;
   margin-right: 10px;
 }
-.rojo {
-  background: #ff1616;
-}
+
+.rojo { background: #ff1616; }
+
 .texto-comentario {
   background: #f1f1f1;
   padding: 10px;
   border-radius: 8px;
 }
 
-/* Formulario comentario */
+/* ===== Formulario comentario ===== */
 .form-comentario {
   background: #e9e9e9;
   padding: 15px;
   margin-top: 25px;
   border-radius: 8px;
 }
+
 .form-comentario label {
   display: block;
   margin-top: 10px;
 }
+
 .form-comentario input,
 .form-comentario textarea {
   width: 100%;
@@ -135,10 +174,9 @@ body {
   border: 1px solid #ccc;
   border-radius: 6px;
 }
-.form-comentario textarea {
-  /* Evita que el usuario pueda redimensionar el textarea (quita la 'esquina' de arrastre) */
-  resize: none;
-}
+
+.form-comentario textarea { resize: none; }
+
 .form-comentario button {
   margin-top: 15px;
   background: #ff1616;
@@ -148,20 +186,23 @@ body {
   border-radius: 8px;
   cursor: pointer;
 }
-.form-comentario button:hover {
-  background: #ff1616;
-}
 
-/* Sidebar */
+.form-comentario button:hover { background: #e60000; }
+
+/* ===== Sidebar ===== */
 .sidebar {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
+
 .sidebar > div {
   background: #fff;
   padding: 15px;
-  margin-bottom: 15px;
   border-radius: 8px;
 }
+
 .sidebar input {
   width: 100%;
   padding: 6px;
@@ -169,6 +210,7 @@ body {
   border-radius: 6px;
   border: 1px solid #ccc;
 }
+
 .sidebar button {
   margin-top: 10px;
   width: 100%;
@@ -179,6 +221,7 @@ body {
   border-radius: 6px;
   cursor: pointer;
 }
+
 .tags span {
   background: #111;
   color: #fff;
@@ -187,14 +230,7 @@ body {
   margin: 3px;
   display: inline-block;
 }
-ul {
-  list-style: none;
-  margin-top: 8px;
-}
-ul li {
-  margin-bottom: 8px;
-}
-/* Artículos recientes rayas rojas y flechas */
+
 .raya {
   width: 3px;
   height: 25px;
@@ -223,13 +259,6 @@ ul li {
   font-size: 0.8rem;
 }
 
-/*flechas de categorias*/
-.categorias ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
 .categorias li {
   display: flex;
   align-items: center;
@@ -237,12 +266,12 @@ ul li {
   font-weight: 500;
 }
 
-    .regresar, .regresar h2 {
-      text-align: center;
-      color: black;
-    }
+.regresar, .regresar h2 {
+  text-align: center;
+  color: black;
+}
 
-/* Footer */
+/* ===== Footer ===== */
 footer {
   margin-top: auto;
   background: #ff1616;
@@ -280,7 +309,6 @@ footer {
   text-decoration: underline;
 }
 
-/* Íconos sociales */
 .social-iconos {
   display: grid;
   grid-template-columns: repeat(2, 40px);
@@ -307,13 +335,12 @@ footer {
   height: 28px;
 }
 
-/* Logo en footer */
 #logofooter img {
   max-width: 150px;
   height: auto;
 }
 
-/* Formulario newsletter */
+/* Newsletter */
 .lo-mas-nuevo {
   display: flex;
   gap: 10px;
@@ -345,7 +372,6 @@ footer {
   background: #f0f0f0;
 }
 
-/* Footer inferior */
 .footer-bottom {
   background: black;
   color: #ccc;
@@ -354,124 +380,50 @@ footer {
   text-align: center;
 }
 
-/* ===== RESPONSIVE PARA FOOTER ===== */
-
+/* ======== RESPONSIVE ======== */
 @media (max-width: 1024px) {
-  .footer-top {
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 25px;
-    padding: 25px 15px;
-  }
-  
-  .footer-top h3 {
-    font-size: 16px;
-    margin-bottom: 15px;
-  }
+  .contenedor { flex-direction: column; padding: 20px; }
+  .contenido { margin-bottom: 20px; }
+  .contenido .img-grid { grid-template-columns: 1fr; }
+  .footer-top { grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 25px; padding: 25px 15px; }
+  .footer-top h3 { font-size: 16px; margin-bottom: 15px; }
 }
 
 @media (max-width: 768px) {
-  .footer-top {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    padding: 20px 15px;
-  }
-  
-  .footer-top h3 {
-    font-size: 15px;
-    margin-bottom: 12px;
-  }
-  
-  .footer-top p {
-    font-size: 14px;
-  }
-  
-  #logofooter img {
-    max-width: 120px;
-  }
-  
-  .lo-mas-nuevo input {
-    width: 150px;
-  }
-  
-  .footer-bottom {
-    padding: 12px;
-    font-size: 13px;
-  }
+  .encabezado h1 { font-size: 1.5rem; }
+  .encabezado .categoria { font-size: 0.8rem; }
+  .form-comentario input, .form-comentario textarea, .sidebar input { font-size: 14px; padding: 6px; }
+  .form-comentario button, .sidebar button { font-size: 14px; padding: 8px; }
+  .footer-top { grid-template-columns: repeat(2, 1fr); gap: 20px; padding: 20px 15px; }
+  .footer-top h3 { font-size: 15px; margin-bottom: 12px; }
+  .footer-top p { font-size: 14px; }
+  #logofooter img { max-width: 120px; }
+  .lo-mas-nuevo input { width: 150px; }
+  .footer-bottom { padding: 12px; font-size: 13px; }
 }
 
 @media (max-width: 580px) {
-  .footer-top {
-    grid-template-columns: 1fr;
-    gap: 25px;
-    padding: 20px 15px;
-    text-align: center;
-  }
-  
-  .footer-top h3 {
-    font-size: 16px;
-    margin-bottom: 15px;
-  }
-  
-  .footer-top p {
-    font-size: 14px;
-  }
-  
-  #logofooter {
-    display: flex;
-    justify-content: center;
-  }
-  
-  #logofooter img {
-    max-width: 130px;
-  }
-  
-  .lo-mas-nuevo {
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .lo-mas-nuevo input {
-    width: 100%;
-    max-width: 280px;
-  }
-  
-  .lo-mas-nuevo button {
-    width: 100%;
-    max-width: 280px;
-  }
-  
-  .social-iconos {
-    gap: 20px;
-  }
+  .footer-top { grid-template-columns: 1fr; gap: 25px; padding: 20px 15px; text-align: center; }
+  #logofooter { display: flex; justify-content: center; }
+  #logofooter img { max-width: 130px; }
+  .lo-mas-nuevo { flex-direction: column; align-items: center; }
+  .lo-mas-nuevo input, .lo-mas-nuevo button { width: 100%; max-width: 280px; }
+  .social-iconos { gap: 20px; }
 }
 
 @media (max-width: 480px) {
-  .footer-top {
-    padding: 18px 8px;
-    gap: 12px;
-  }
+  .encabezado h1 { font-size: 1.3rem; }
+  .contenido { padding: 15px; }
+  .contenedor { gap: 15px; }
+  .recientes-lista li small { margin-left: 30px; font-size: 0.75rem; }
+  .footer-top { padding: 18px 8px; gap: 12px; }
 }
 
 @media (max-width: 400px) {
-  .footer-top {
-    padding: 15px 10px;
-    gap: 20px;
-  }
-  
-  .footer-top h3 {
-    font-size: 15px;
-  }
-  
-  .footer-top p {
-    font-size: 13px;
-  }
-  
-  #logofooter img {
-    max-width: 110px;
-  }
-  
-  .footer-bottom {
-    font-size: 12px;
-    padding: 10px;
-  }
+  .contenido .img-grid img, .contenido > img { max-height: 250px; }
+  .footer-top { padding: 15px 10px; gap: 20px; }
+  .footer-top h3 { font-size: 15px; }
+  .footer-top p { font-size: 13px; }
+  #logofooter img { max-width: 110px; }
+  .footer-bottom { font-size: 12px; padding: 10px; }
 }

@@ -276,7 +276,7 @@ details[open] .faq-pregunta span:last-child {  /* Cuando el detalle se despliega
     }
 }
 
-    /* Footer */
+/* ===== Footer ===== */
 footer {
   margin-top: auto;
   background: #ff1616;
@@ -286,11 +286,11 @@ footer {
 
 .footer-top {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 35px;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 25px 10px;
+  padding: 25px 20px;
 }
 
 .footer-top h3 {
@@ -298,18 +298,22 @@ footer {
   margin-bottom: 25px;
 }
 
+.footer-top p {
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
 .footer-top a {
   color: white;
   text-decoration: none;
-  display: block;
-  margin-bottom: 1px;
+  display: inline-block;
+  margin-bottom: 5px;
 }
 
 .footer-top a:hover {
   text-decoration: underline;
 }
 
-/* Íconos sociales */
 .social-iconos {
   display: grid;
   grid-template-columns: repeat(2, 40px);
@@ -336,12 +340,18 @@ footer {
   height: 28px;
 }
 
-/* Formulario newsletter */
+#logofooter img {
+  max-width: 150px;
+  height: auto;
+}
+
+/* Newsletter */
 .lo-mas-nuevo {
   display: flex;
   gap: 10px;
   margin-top: 10px;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .lo-mas-nuevo input {
@@ -349,22 +359,76 @@ footer {
   border-radius: 5px;
   border: none;
   width: 180px;
+  min-width: 150px;
 }
 
 .lo-mas-nuevo button {
   background: white;
+  color: #ff1616;
   border: none;
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
   font-weight: bold;
+  transition: background 0.2s ease;
 }
 
-/* Footer inferior */
+.lo-mas-nuevo button:hover {
+  background: #f0f0f0;
+}
+
 .footer-bottom {
   background: black;
   color: #ccc;
   padding: 15px;
   font-size: 14px;
   text-align: center;
+}
+
+/* ======== RESPONSIVE ======== */
+@media (max-width: 1024px) {
+  .contenedor { flex-direction: column; padding: 20px; }
+  .contenido { margin-bottom: 20px; }
+  .contenido .img-grid { grid-template-columns: 1fr; }
+  .footer-top { grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 25px; padding: 25px 15px; }
+  .footer-top h3 { font-size: 16px; margin-bottom: 15px; }
+}
+
+@media (max-width: 768px) {
+  .encabezado h1 { font-size: 1.5rem; }
+  .encabezado .categoria { font-size: 0.8rem; }
+  .form-comentario input, .form-comentario textarea, .sidebar input { font-size: 14px; padding: 6px; }
+  .form-comentario button, .sidebar button { font-size: 14px; padding: 8px; }
+  .footer-top { grid-template-columns: repeat(2, 1fr); gap: 20px; padding: 20px 15px; }
+  .footer-top h3 { font-size: 15px; margin-bottom: 12px; }
+  .footer-top p { font-size: 14px; }
+  #logofooter img { max-width: 120px; }
+  .lo-mas-nuevo input { width: 150px; }
+  .footer-bottom { padding: 12px; font-size: 13px; }
+}
+
+@media (max-width: 580px) {
+  .footer-top { grid-template-columns: 1fr; gap: 25px; padding: 20px 15px; text-align: center; }
+  #logofooter { display: flex; justify-content: center; }
+  #logofooter img { max-width: 130px; }
+  .lo-mas-nuevo { flex-direction: column; align-items: center; }
+  .lo-mas-nuevo input, .lo-mas-nuevo button { width: 100%; max-width: 280px; }
+  .social-iconos { gap: 20px; }
+}
+
+@media (max-width: 480px) {
+  .encabezado h1 { font-size: 1.3rem; }
+  .contenido { padding: 15px; }
+  .contenedor { gap: 15px; }
+  .recientes-lista li small { margin-left: 30px; font-size: 0.75rem; }
+  .footer-top { padding: 18px 8px; gap: 12px; }
+}
+
+@media (max-width: 400px) {
+  .contenido .img-grid img, .contenido > img { max-height: 250px; }
+  .footer-top { padding: 15px 10px; gap: 20px; }
+  .footer-top h3 { font-size: 15px; }
+  .footer-top p { font-size: 13px; }
+  #logofooter img { max-width: 110px; }
+  .footer-bottom { font-size: 12px; padding: 10px; }
 }
