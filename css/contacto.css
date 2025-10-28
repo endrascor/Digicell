@@ -1,8 +1,17 @@
 /* Reset y estilos base */
-* { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: Arial, Helvetica, sans-serif; background: #f4f4f4; color: #111; background-image: url(Images/abstract-seamless-white-and-grey-square-3d-pattern-background-modern-geometric-texture-design-illustration-vector.jpg);}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-/* Barra superior */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f4f4 url(Images/abstract-seamless-white-and-grey-square-3d-pattern-background-modern-geometric-texture-design-illustration-vector.jpg);
+  color: #111;
+}
+
+/* ======= Barra superior ======= */
 .topbar {
   background: black;
   color: white;
@@ -19,9 +28,12 @@ body { font-family: Arial, Helvetica, sans-serif; background: #f4f4f4; color: #1
   flex-wrap: wrap;
   gap: 10px;
   align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
 }
 
-/* Menú principal */
+/* ======= Menú principal ======= */
 nav {
   background: #ff1616;
   display: flex;
@@ -43,12 +55,12 @@ nav a:hover {
   text-decoration: underline;
 }
 
-.search-bar img {
-  vertical-align: middle;
-  margin-left: 5px;
-  height: 24px;
-  width: 24px;
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
+
 .search-bar input {
   padding: 7px 10px;
   border: none;
@@ -56,7 +68,13 @@ nav a:hover {
   width: 220px;
 }
 
-/* === Menú Hamburguesa === */
+.search-bar img {
+  height: 24px;
+  width: 24px;
+  vertical-align: middle;
+}
+
+/* ======= Botón Hamburguesa ======= */
 .hamburger {
   display: none;
   background: #ff1616;
@@ -65,20 +83,16 @@ nav a:hover {
   width: 100%;
   text-align: center;
   padding: 10px 0;
-  margin: 0;
 }
 
 .hamburger img {
   width: 36px;
   height: 36px;
-  vertical-align: middle;
 }
 
-/* Diseño del menú en móviles */
-@media screen and (max-width: 768px) {
-  .hamburger {
-    display: block;
-  }
+/* ======= Menú en pantallas pequeñas ======= */
+@media (max-width: 768px) {
+  .hamburger { display: block; }
 
   #main-nav {
     display: none;
@@ -89,55 +103,34 @@ nav a:hover {
     padding: 15px 0;
   }
 
-  #main-nav.open {
-    display: flex;
-  }
+  #main-nav.open { display: flex; }
 
   #main-nav a {
     display: block;
     width: 100%;
     text-align: center;
-    padding: 10px 0;
+    padding: 12px 0;
     font-size: 18px;
     color: white;
-    text-decoration: none;
-  }
-
-  #main-nav a:hover {
-    background-color: rgba(255,255,255,0.15);
   }
 
   #main-nav .search-bar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background: white;
+    border-radius: 5px;
+    padding: 5px;
     width: 90%;
     max-width: 300px;
     margin: 10px 0;
-    background-color: white;
-    border-radius: 5px;
-    padding: 5px;
+    justify-content: center;
   }
 
   #main-nav .search-bar input {
     flex: 1;
-    padding: 7px 10px;
-    border: none;
-    border-radius: 5px;
-    outline: none;
+    padding: 7px;
     font-size: 16px;
   }
 
-  #main-nav .search-bar a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: 5px;
-  }
-
   #main-nav .search-bar img {
-    height: 24px;
-    width: 24px;
     margin: 0;
   }
 
@@ -145,11 +138,11 @@ nav a:hover {
     display: flex;
     justify-content: center;
     gap: 15px;
-    margin-top: 15px;
+    margin-top: 10px;
   }
 }
 
-/* informacion */
+/* ======= Sección de contacto ======= */
 .contacto-container {
   max-width: 1200px;
   margin: 40px auto;
@@ -159,17 +152,21 @@ nav a:hover {
   gap: 40px;
 }
 
-.info-contacto {
+.info-contacto,
+.formulario-contacto {
   background: white;
   padding: 30px;
   border-radius: 12px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-.info-contacto h2 {
+/* ======= Información ======= */
+.info-contacto h2,
+.formulario-contacto h2 {
   color: #ff1616;
   margin-bottom: 20px;
   font-size: 24px;
+  text-align: center;
 }
 
 .info-item {
@@ -190,19 +187,16 @@ nav a:hover {
   margin-left: 30px;
 }
 
-.formulario-contacto {
-  background: white;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+/* ======= Mapa responsivo ======= */
+.info-contacto iframe {
+  width: 100%;
+  height: 250px;
+  border: 0;
+  border-radius: 8px;
+  margin-top: 10px;
 }
 
-.formulario-contacto h2 {
-  color: #ff1616;
-  margin-bottom: 20px;
-  font-size: 24px;
-}
-
+/* ======= Formulario ======= */
 .campo-form {
   margin-bottom: 20px;
 }
@@ -212,71 +206,104 @@ nav a:hover {
   margin-bottom: 8px;
   color: #333;
   font-weight: bold;
+  font-size: 16px;
 }
 
 .campo-form input,
 .campo-form textarea,
 .campo-form select {
   width: 100%;
-  padding: 10px;
+  padding: 12px;
   border: 1px solid #ddd;
   border-radius: 6px;
   font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.campo-form input:focus,
+.campo-form textarea:focus,
+.campo-form select:focus {
+  border-color: #ff1616;
+  outline: none;
 }
 
 .campo-form textarea {
-  height: 120px;
-  resize: none; /* no se expande */
+  height: 140px;
+  resize: none;
 }
 
 .opciones-radio {
   display: flex;
-  gap: 20px;
-}
-
-.opcion-radio {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.opcion-radio input[type="radio"] {
-  width: auto;
+  flex-wrap: wrap;
+  gap: 15px;
 }
 
 .btn-enviar {
   background: #ff1616;
   color: white;
-  padding: 12px 24px;
+  padding: 14px 20px;
   border: none;
   border-radius: 6px;
   font-size: 16px;
   cursor: pointer;
   width: 100%;
   font-weight: bold;
+  transition: background 0.3s ease;
 }
 
-.btn-enviar:hover {
-  background: #e60000;
+.btn-enviar:hover { background: #e60000; }
+
+/* ======= Responsividad ======= */
+@media (max-width: 1024px) {
+  .contacto-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 15px;
+  }
 }
 
-.mapa {
-  width: 100%;
-  height: 200px;
-  border-radius: 8px;
-  margin-top: 20px;
+@media (max-width: 768px) {
+  .campo-form label,
+  .campo-form input,
+  .campo-form textarea,
+  .campo-form select,
+  .btn-enviar {
+    font-size: 15px;
+  }
+
+  .info-contacto h2,
+  .formulario-contacto h2 {
+    font-size: 20px;
+  }
+
+  .info-contacto iframe {
+    height: 220px;
+  }
+}
+
+@media (max-width: 480px) {
+  .formulario-contacto,
+  .info-contacto {
+    padding: 20px 15px;
+  }
+
+  .campo-form input,
+  .campo-form textarea,
+  .campo-form select {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .btn-enviar {
+    font-size: 14px;
+    padding: 10px;
+  }
 }
 
     .regresar, .regresar h2 {
       text-align: center;
       color: black;
     }
-
-@media (max-width: 768px) {
-  .contacto-container {
-    grid-template-columns: 1fr;
-  }
-}
 
 /* Footer */
 footer {
